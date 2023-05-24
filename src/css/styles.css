@@ -1,0 +1,153 @@
+.container{
+  max-width: 1230px;
+  border: 1px solid red;
+  padding-left: 60px;
+  padding-right: 60px;
+}
+
+h1,
+h2,
+h3,
+h4,
+p {
+    margin: 0px;
+}
+
+ul,
+li {
+    margin: 0px;
+    padding: 0px;
+}
+
+
+.link {
+  text-decoration: none;
+}
+
+.list {
+    list-style: none;
+    padding-left: 0px;
+}
+
+
+Img {
+    display: block;
+}
+
+button {
+  display: block;
+    padding: 0;
+}
+
+.body{
+  font-family:'Montserrat', sans-serif;
+  font-weight: 600;
+}
+
+.header-section{
+  padding-top: 65px;
+}
+  .header-wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+
+  .nav-list{
+    display: flex;
+    gap: 20px;
+  }
+
+  .nav-item .nav-link:hover,
+.nav-item .nav-link:focus {
+  color: #F7931E;
+}
+
+
+.nav-link,
+.contact-link{
+   font-family: 'Montserrat', sans-serif; 
+   font-size: 16px;
+  font-weight: 600;
+  line-height: 1.2;
+}
+/* .contact-link{
+  font-family: 'Montserrat', sans-serif;
+
+} */
+.contact-link:hover,
+.contact-link:focus{
+  color: #F7931E;
+}
+
+.hero-section{
+  padding-bottom: 63px;
+}
+.hero-title{
+  font-family: 'Montserrat', sans-serif; 
+  font-weight: 700;
+  font-size: 68px;
+  line-height: 1;
+  text-align: center;
+  padding-top: 255px;
+  padding-bottom: 35px;
+}
+.hero-subtittle{
+  font-family: 'Montserrat', sans-serif; 
+  font-weight: 500;
+  font-size: 28px;
+  line-height: 1.2;
+  padding-bottom: 35px;
+  text-align: center;
+}
+
+
+.hero-btn::before {
+  content: '';  /* чтобы сгенерировать поле */
+  position: absolute;
+  top: 0; right: 0; bottom: 0; left: 0;
+   z-index: -1; 
+  background: #58a;
+  transform: skew(-30deg);
+  background-color: #F7931E;
+  /* margin:0 auto ; */
+  }
+
+.hero-btn{
+  display: block;
+  position: relative;
+  font-family: 'Montserrat', sans-serif; 
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.25;
+padding: 20px 33px;
+  margin: 0 auto;
+  width: 260px;
+  height: 60px;
+
+  background-color: transparent;
+  color: #FFFFFF;
+  border: transparent;
+}
+
+.hero-btn::after{
+  content: '';  /* чтобы сгенерировать поле */
+  position: absolute;
+  top: -8; right: 0; bottom: 0; left: 12;
+  width: 260px;
+  height: 60px;
+  /* padding: 20px 33px; */
+   z-index: -1; 
+  background: transparent;
+  border: 1px solid #61d1d1;
+  transform: skew(-30deg);
+  /* color: #61d1d1; */
+}
+
+
+
+
+.social-icon{
+  fill: black;
+}

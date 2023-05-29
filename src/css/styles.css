@@ -202,6 +202,11 @@ padding: 20px 33px;
   /* color: #61d1d1; */
 }
 
+ .hero-section .main-btn:hover::before {
+  top: -8; right: 3; bottom: 8; left: 12;
+ 
+} 
+
 
 .social-list{
   display: flex;
@@ -209,6 +214,10 @@ padding: 20px 33px;
   margin-left: auto;
   width: fit-content;
 }
+
+/* .social-list:hover{
+  fill: #F7931E;
+} */
 /*=================Service-Section=========================*/
 .service-section{ 
   padding-top: 172px;
@@ -535,6 +544,7 @@ top: 75;
 }
 .single-training-list{
   display: flex;
+  justify-content: center;
   /* margin: 0 auto; */
   gap: 30px;
   /* width: 308px; */
@@ -628,7 +638,9 @@ margin: 0 auto;
 
 
   .trainer-tittle,
-  .form-tittle{
+  .form-tittle,
+  .contacts-tittle
+  {
     font-family: 'Montserrat', sans-serif; 
     font-weight: 700;
     font-size: 30px;
@@ -747,7 +759,7 @@ margin: 0 auto;
   padding-top: 111px;
   padding-bottom: 30px;
   overflow: hidden;
-  height: 500px; /* змініть висоту на потрібну вам */
+  height: 550px; /* змініть висоту на потрібну вам */
 }
 
 
@@ -758,4 +770,81 @@ margin: 0 auto;
   width: 100%;
   height: 100%;
   border: 0;
+}
+
+.contacts-address-wrapper{
+    position: absolute;
+    top: 10;
+    left: 10;
+    font-family: 'Montserrat', sans-serif; 
+    font-size: 16px;
+    line-height: calc(24/16);
+    bottom: 0;
+    z-index: 1;
+    padding: 50px 35px 55px 35px;
+    /* background-color: rgba(12, 20, 23, 0.9); */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: #FFF;
+  
+  background-color: #0C1417;
+  max-width: 396px;
+  max-height: 449px;
+}
+.contacts-address-location {
+  display: block;
+  color: #FFFFFF;
+  margin-bottom: 26px;
+  text-decoration: none;
+  transition: color 0.2s ease-in-out;
+}
+.contacts-address-location:hover {
+  color: #F7931E;
+}
+
+.contacts-tittle{
+  margin-top: 10px;
+  margin-bottom: 50px;
+}
+
+.contacts-address-icon{
+  position: absolute;
+  width: 17px;
+  height: 24px;
+  z-index: 1;
+  fill:#F7931E
+}
+.time-schedule {
+  margin-bottom: 27px;
+}
+
+.telephone-list{
+  margin-bottom: 40px;
+}
+
+.social-list-parafraph{
+  font-family: 'Montserrat', sans-serif; 
+  font-size: 16px;
+  line-height: calc(30/16);
+  margin-bottom: 30px;
+}
+
+.address-social-list{
+  display: flex;
+  gap: 15px;
+  margin-right: 0 auto;
+}
+.social-icon:hover {
+  fill: #F7931E;
+}
+
+/*===============footer================*/
+.footer{
+  /* display: flex; */
+  background-color: #0C1417;
+}
+.footer>.container{
+  display: flex;
+  gap: 50px
 }

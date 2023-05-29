@@ -53,7 +53,7 @@
   <h1 class="hero-title" >Фітнес клуб Пантеон</h1>
   <p class="hero-subtittle">Кращі за нас тільки боги</p>
 
-  <button class="hero-btn" type=" button"> Отримати консультацію</button>
+  <button class="main-btn" type="submit"> Отримати консультацію</button>
   <!-- <span class="btn-style"></span> -->
   <ul class="social-list list">
     <li class="social-item">
@@ -87,7 +87,7 @@
   <h2 class="service-tittle">Новий спосіб життя</h2>
   <p class="service-subtittle">Ставши частиною нашої команди, ви зможете змінити звичний ритм життя та зробити кожен свій день особливим, 
     а формат наших тренувань дозволить розкрити потенціал вашого тіла на 100%.</p>
-    <button class="service-btn hero-btn" type=" button"> Отримати консультацію</button>
+    <button class="service-btn" type="submit"> Отримати консультацію</button>
   </div>
 </div>
   <div class="service-list-wrapper">
@@ -138,10 +138,10 @@
 
 </div>
 </section>
-<section class="discription-section">
+<section class="subscription-section">
   <div class="container">
-    <h2 class="discription-tittle">Абонементи</h2>
-    <table class="discription-table">
+    <h2 class="subscription-tittle">Абонементи</h2>
+    <table class="subscription-table">
       <thead class="table-head">
         <tr class="table-row">
           <th class="table-title">Кількість занять</th>
@@ -176,8 +176,139 @@
         </tr>
       </tbody>
     </table>
+
+    <h2 class="time-subscription-tittle">Абонементи за часом</h2>
+    <table class="time-subscription-table">
+      <thead class="table-head">
+        <tr class="table-row">
+          <th class="table-title">Тип карти</th>
+          <th class="table-title ">12 місяців</th>
+          <th class="table-title">6 місяців</th>
+          <th class="table-title">3 місяці</th>
+          <th class="table-title">1 місяць</th>
+        </tr>
+      </thead>
+      <tbody class="table-body">
+        <tr class="table-row">
+          <td class="table-data
+          ">Індивідуальна, повна без обмеження відвідуванні / 8:00 – 23:00</td>
+          <td class="table-data">8000 грн<br>(+200 хв. солярия)</td>
+          <td class="table-data"> 1800 грн </td>
+          <td class="table-data">1000 грн</td>
+          <td class="table-data">800 грн</td>
+        </tr>
+        <tr class="table-row">
+          <td class="table-data">Індивідуальна, денна / 8:00 – 17:00</td>
+          <td class="table-data"> - </td>
+          <td class="table-data"> 1000грн </td>
+          <td class="table-data">1000 грн </td>
+          <td class="table-data">1000 грн</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2 class="single-training-tittle">Абонементи</h2>
+    <ul class="single-training-list list">
+      <li class="single-training-item">
+        <div class="single-training-wrapper">
+          <p class="training-list-tittle">Самостійні тренування <br>в тренажерному залі</p>
+        <p class="training-list-time">8:00 – 23:00</p>
+        <img class="training-icon" src="./img/Vector (4).png" alt="картинка  тренажеру" width="34" height="34">
+        <p class="training-list-price">250 грн</p>
+        <p class="training-list-amount">1 тренування</p>
+        <button class="training-list-btn" type="button">Дізнатися</button>
+        </div>
+      </li>
+      <li>
+        <div class="single-training-wrapper">
+          <p class="training-list-tittle">Персональний тренінг <br>з тренером</p>
+          <p class="training-list-time">8:00 – 23:00</p>
+          <img class="training-icon" src="./img/Vector (4).png" alt="картинка  тренажеру" width="34" height="34">
+          <p class="training-list-price">700 грн</p>
+          <p class="training-list-amount">1 тренування</p>
+          <button class="training-list-btn" type="button">Дізнатися</button>
+        </div>
+      </li>
+      <li>
+        <div class="single-training-wrapper">
+          <p class="training-list-tittle">Зал групових <br>програм</p>
+          <p class="training-list-time">8:00 – 23:00</p>
+          <img class="training-icon" src="./img/Vector (4).png" alt="картинка  тренажеру" width="34" height="34">
+          <p class="training-list-price">300 грн</p>
+          <p class="training-list-amount">1 тренування</p>
+          <button class="training-list-btn" type="button">Дізнатися</button>
+        </div>
+      </li>
+    </ul>
   </div>
 </section>
+<section class="trainer-section">
+  <div class="container">
+  <h2 class="trainer-tittle">Тренери</h2>
+  <div class="trainer-swipper"></div>
+</div>
+</section>
+<section class="consultation-section">
+  <div class="container">
+    <div class="form-wrapper">
+    <form class="consultation-form" action="submit-form" method="POST">
+  <p class="form-tittle">Залишились запитання?</p>
+  <p class="form-subtittle">Залишіть Ваш номер телефону
+    і ми <span class="form-span"> обов'язково з Вами зв'яжемося</span></p>
+ 
+  
+    <input  class="name-input" type="text" id="name" name="name" placeholder="Введіть ім'я" required>
+  
+   
+    <input class="phone-input" type="tel" id="phone" name="phone" placeholder="Введіть ім'я" required>
+  
+    <button class="service-btn" type="submit">Отримати консультацію</button>
+  
+    <label class="agreement-label" for="agreement">
+      <input class="agreement-checkbox" type="checkbox" id="agreement" name="agreement" required>
+Натискаючи на кнопку ви погоджуєтесь з політикою конфіденційності
+    </label>
+  </div>
+  </form>
+</div>
+</div>
+</section>
+<section class="contacts-section">
+  <div class="container">
+  <!-- <div class="contacts-address-thumb">
+    <address class="contacts-address">
+      <a
+        href="https://goo.gl/maps/CPFVVT7tqRFJdAgo7"
+        target="_blank" rel="noopener noreferrer nofollow"
+        class="contacts-address-link"
+      >
+        <svg class="contacts-address-icon" width="24" height="24">
+          <use href="./img/icons.svg#location"></use>
+        </svg>
+      </a>
+      <a
+        class="contacts-address-location link"
+        href="https://goo.gl/maps/CPFVVT7tqRFJdAgo7"
+        rel="nofollow noopener"
+        target="_blank"
+      >
+        Україна, м. Полтава, вул. Маршала Бірюзова, 15
+      </a>
+    </address>
+  </div>
+</div>
+<div class="contacts-wrap"> -->
+  <iframe
+    class="contacts-address-map"
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1327.6374247903318!2d25.949497150785966!3d48.27832796517316!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x473408c3fdaf9ad7%3A0x4e5e580579ad7cc4!2z0LLRg9C70LjRhtGPINCR0ZbQu9C-0YPRgdC-0LLQsCwgMjUsINCn0LXRgNC90ZbQstGG0ZYsINCn0LXRgNC90ZbQstC10YbRjNC60LAg0L7QsdC70LDRgdGC0YwsIDU4MDAw!5e0!3m2!1suk!2sua!4v1685364803118!5m2!1suk!2sua" 
+    allowfullscreen=""
+    loading="lazy"
+    referrerpolicy="no-referrer-when-downgrade"
+  >
+  </iframe>
+</div>
+</div>
+</section>
+
    </main>
 
     <script src="index.js" type="module"></script>

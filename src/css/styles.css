@@ -1,6 +1,5 @@
 .container{
   max-width: 1310px;
-  border: 1px solid red;
   padding-left: 60px;
   padding-right: 60px;
   margin: 0 auto;
@@ -45,9 +44,7 @@ button {
   font-weight: 600;
 }
 
-/* .header-section{
-  padding-top: 65px;
-}  */
+
   .header-wrapper{
     display: flex;
      align-items: center; 
@@ -61,10 +58,17 @@ button {
     z-index: 10;
   }
   
-  header>.container {
+   header>.header-section {
     position: relative;
-  }
-
+   
+  } 
+  /* .hero-wrapper{
+    height: 100vh; /* встановлюється висота на весь екран */
+     /* display: flex;
+    flex-direction: column;  */
+     /* justify-content: center;
+    align-items: center;  */
+  /* }  */
 
   .nav-list{
     padding-top: 20px;
@@ -126,11 +130,13 @@ color: #FFFFFF;
 } */
 
 .hero-section{
-  padding-bottom: 63px;
+  position: relative;
   background-image: linear-gradient(rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.1) 100%, rgba(0, 0, 0, 0.4) 100%),
   url(../img/pexels-hero@1x.jpg);
   background-repeat: no-repeat;
   background-size: cover;
+  padding-top: 255px;
+  padding-bottom: 387px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -142,8 +148,8 @@ color: #FFFFFF;
   line-height: 1;
   text-align: center;
   /* padding-top: 255px; */
-  /* padding-bottom: 35px; */
-  margin-top: 339px;
+   /* padding-top: 285px;  */
+  /* margin-top: 339px; */
   margin-bottom: 35px;
   color: #FFFFFF;
 }
@@ -167,7 +173,6 @@ color: #FFFFFF;
   line-height: 1.25;
 padding: 20px 33px;
   margin: 0 auto;
-  margin-bottom: 287px;
   /* width: 260px;
   height: 60px; */
   z-index: 1;
@@ -209,12 +214,22 @@ padding: 20px 33px;
 
 
 .social-list{
+  position: absolute;
+  bottom: 63;
+  right: 63;
   display: flex;
   gap: 15px;
   margin-left: auto;
   width: fit-content;
 }
+.social-icon{
+  fill: #FFFFFF;
+}
 
+.social-icon:hover,
+.social-icon:focus{
+  fill: #F7931E;
+}
 /* .social-list:hover{
   fill: #F7931E;
 } */
@@ -422,8 +437,10 @@ top: 75;
 
 .time-subscription-tittle
 {
+  
   font-size: 24px;
   line-height: calc(30/24);
+  margin-top: 100px;
 }
  /* .table-row{
   border-bottom: 1px solid rgba(12, 20, 23, 0.5);
@@ -515,6 +532,7 @@ top: 75;
   font-weight: 700;
   font-size: 24px;
   line-height: calc(24/30);
+  margin-top: 90px;
   margin-bottom: 80px;
   color: #0C1417;
   text-align: center;
@@ -793,7 +811,8 @@ margin: 0 auto;
   max-height: 449px;
 }
 .contacts-address-location {
-  display: block;
+   display: flex;
+  gap: 15px; 
   color: #FFFFFF;
   margin-bottom: 26px;
   text-decoration: none;
@@ -808,19 +827,30 @@ margin: 0 auto;
   margin-bottom: 50px;
 }
 
-.contacts-address-icon{
+/* .contacts-address-icon{
   position: absolute;
   width: 17px;
   height: 24px;
   z-index: 1;
   fill:#F7931E
-}
+} */
 .time-schedule {
+  display: flex;
+  justify-items: center;
+  gap: 15px;
   margin-bottom: 27px;
 }
 
 .telephone-list{
   margin-bottom: 40px;
+}
+.phone-wrapper{
+  display: flex;
+  gap: 17px;
+}
+
+.phone-icon{
+  fill:#F7931E;
 }
 
 .social-list-parafraph{
@@ -835,16 +865,80 @@ margin: 0 auto;
   gap: 15px;
   margin-right: 0 auto;
 }
-.social-icon:hover {
-  fill: #F7931E;
-}
+
 
 /*===============footer================*/
 .footer{
   /* display: flex; */
+  /* position: relative; */
+  padding-top: 50px;
+  padding-bottom: 50px;
   background-color: #0C1417;
 }
 .footer>.container{
+  
+  font-family: 'Montserrat', sans-serif; 
+  font-weight: 400;
+  font-size: 14px;
+  line-height: calc(24/14);
   display: flex;
-  gap: 50px
+  /* gap: 50px; */
+  align-items: flex-start;
+  justify-content: space-between;
+  color:rgba(255, 255, 255, 0.7)
+}
+
+.footer-logo-wrapper{
+  /* position: absolute; */
+  position: relative;
+  top:-30;
+   text-align: center; 
+
+}
+/* .footer-logo-link{
+  position: relative;
+  left: -10;
+} */
+
+.footer-social-tittle{
+  font-family: 'Montserrat', sans-serif; 
+  font-weight: 400;
+  font-size: 14px;
+  line-height: calc(24/14);
+  margin-bottom: 21px;
+}
+.footer-social-list{
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+ 
+}
+.footer-social-icon{
+  fill: rgba(255, 255, 255, 0.7);
+}
+
+.footer-social-icon:hover,
+.footer-social-icon:focus{
+  fill: #F7931E;
+}
+
+.footer-subscription-link,
+.about-us-link
+{
+  display: inline-block;
+  color:rgba(255, 255, 255, 0.7)
+}
+
+.footer-subscription-link:hover,
+.footer-subscription-link:focus,
+.about-us-link:hover,
+.about-us-link:focus{
+  color: #F7931E;
+}
+
+.footer-subscription-link:not(last-child),
+.about-us-link:not(last-child){ margin-bottom: 5px;}
+
+.footer-addres-item:not(last-child){
+  margin-bottom: 5px;
 }

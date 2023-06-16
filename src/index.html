@@ -10,6 +10,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- <link rel="stylesheet" href="./css/swiper.css"> -->
+    <link
+    href="https://cdn.jsdelivr.net/npm/basiclightbox@5.0.4/dist/basicLightbox.min.css"
+    rel="stylesheet"/>
     <link rel="stylesheet" href="./css/styles.css">
     <link rel="stylesheet" href="./css/mobile.css">
     <link rel="stylesheet" href="./css/tablet.css">
@@ -59,16 +63,18 @@
           <!-- <span class="btn-style"></span> -->
           <ul class="social-list list">
             <li class="social-item">
-              <a class='link' href="">
+              <a class='link' href="" target="_blank" rel="noopener noreferrer nofollow">
                 <svg class="social-icon" width="22" height="22">
-                  <use href='./img/symbol.svg#icon-instagram1' width="22" height="22">
-                  </use>
+                  <!-- <use href='./img/symbol.svg#icon-instagram1' width="22" height="22" > -->
+                    <use href='./img/symbol.svg#icon-close-black' width="22" height="22" ></use>
+
+                  <!-- </use> -->
                 </svg>
               </a>
 
             </li>
             <li>
-              <a class='link' href="">
+              <a class='link' href="" target="_blank" rel="noopener noreferrer nofollow">
                 <svg class="social-icon" width="22" height="22">
                   <use href='./img/symbol.svg#icon-facebook1' width="22" height="22">
                   </use>
@@ -79,12 +85,42 @@
         </div>
       </div>
       </section>
+      <!---------------------Service-section-------------------------->
       <section class="service-section">
         <div class="container">
           <div class="service-wrapper">
-            <img class="first-img" src="./img/pexels@1x.png" alt="the girl trains in a fitness club" width="368">
+            <!-- <img class="first-img" src="./img/pexels@1x.png" alt="the girl trains in a fitness club" width="368"> -->
+            <picture>
+              <source
+                  srcset="./img/pexels@1x.png 1x, ./img/pexels@2x.png 2x "
+                  media="(min-width: 1280px)">
+              <!-- <source
+                  srcset="./img/homepage/homepage-about-rest-img1-for-tablet.jpg 1x, ./img/homepage/homepage-about-rest-img1-for-tablet@2x.jpg 2x"
+                  media="(min-width: 1024px)">
+              <source
+                  srcset="./img/homepage/homepage-about-rest-img1-for-mobile.jpg 1x, ./img/homepage/homepage-about-rest-img1-for-mobile@2x.jpg 2x"
+                  media="(min-width: 384px)"> -->
 
-            <img class="second-img" src="./img/pex@1x.png" alt="А barbell on the ground" width="368">
+              <img class="first-img" src="./img/pexels@1x.png"
+                  alt="trainer in gym">
+          </picture>
+
+            <!-- <img class="second-img" src="./img/pex@1x.png" alt="А barbell on the ground" width="368"> -->
+            <picture>
+              <source
+                  srcset="./img/pex@1x.png 1x, ./img/pex@2x.png 2x "
+                  media="(min-width: 1280px)">
+              <!-- <source
+                  srcset="./img/homepage/homepage-about-rest-img1-for-tablet.jpg 1x, ./img/homepage/homepage-about-rest-img1-for-tablet@2x.jpg 2x"
+                  media="(min-width: 1024px)">
+              <source
+                  srcset="./img/homepage/homepage-about-rest-img1-for-mobile.jpg 1x, ./img/homepage/homepage-about-rest-img1-for-mobile@2x.jpg 2x"
+                  media="(min-width: 384px)"> -->
+
+                  <img class="second-img" src="./img/pex@1x.png"
+                  alt="trainer in gym">
+          </picture>
+
             <div class="life-style-wrapper">
               <h2 class="service-tittle">Новий спосіб життя</h2>
               <p class="service-subtittle">Ставши частиною нашої команди, ви зможете змінити звичний ритм життя та
@@ -118,29 +154,68 @@
       </section>
       <section class="gallery-section">
         <div class="container">
-          <h1 class="gallery-tittle">Галерея</h1>
-          <!-- <div class="first-gallery-swiper"></div>
-  <div class="second-gallery-swiper"></div> -->
-          <div class="swiper">
-            <!-- Additional required wrapper -->
+          <h1 class="gallery-title">Галерея</h1>
+          <div class="swiper-container">
             <div class="swiper-wrapper">
-              <!-- Slides -->
-              <div class="swiper-slide">Slide 1</div>
-              <div class="swiper-slide">Slide 2</div>
-              <div class="swiper-slide">Slide 3</div>
-              ...
+              <div class="swiper-slide"> <picture>
+                <source
+                    srcset="./img/pexels@1x.png 1x, ./img/pexels@2x.png 2x "
+                    media="(min-width: 1280px)">
+                <!-- <source
+                    srcset="./img/homepage/homepage-about-rest-img1-for-tablet.jpg 1x, ./img/homepage/homepage-about-rest-img1-for-tablet@2x.jpg 2x"
+                    media="(min-width: 1024px)">
+                <source
+                    srcset="./img/homepage/homepage-about-rest-img1-for-mobile.jpg 1x, ./img/homepage/homepage-about-rest-img1-for-mobile@2x.jpg 2x"
+                    media="(min-width: 384px)"> -->
+  
+                <img class="first-img" src="./img/pexels@1x.png"
+                    alt="trainer in gym">
+            </picture></div>
+              <div class="swiper-slide"> <picture>
+                <source
+                    srcset="./img/pexels@1x.png 1x, ./img/pexels@2x.png 2x "
+                    media="(min-width: 1280px)">
+                <!-- <source
+                    srcset="./img/homepage/homepage-about-rest-img1-for-tablet.jpg 1x, ./img/homepage/homepage-about-rest-img1-for-tablet@2x.jpg 2x"
+                    media="(min-width: 1024px)">
+                <source
+                    srcset="./img/homepage/homepage-about-rest-img1-for-mobile.jpg 1x, ./img/homepage/homepage-about-rest-img1-for-mobile@2x.jpg 2x"
+                    media="(min-width: 384px)"> -->
+  
+                <img class="first-img" src="./img/pexels@1x.png"
+                    alt="trainer in gym">
+            </picture></div>
+              <div class="swiper-slide"> <picture>
+                <source
+                    srcset="./img/pexels@1x.png 1x, ./img/pexels@2x.png 2x "
+                    media="(min-width: 1280px)">
+                <!-- <source
+                    srcset="./img/homepage/homepage-about-rest-img1-for-tablet.jpg 1x, ./img/homepage/homepage-about-rest-img1-for-tablet@2x.jpg 2x"
+                    media="(min-width: 1024px)">
+                <source
+                    srcset="./img/homepage/homepage-about-rest-img1-for-mobile.jpg 1x, ./img/homepage/homepage-about-rest-img1-for-mobile@2x.jpg 2x"
+                    media="(min-width: 384px)"> -->
+  
+                <img class="first-img" src="./img/pexels@1x.png"
+                    alt="trainer in gym">
+            </picture></div>
+              <div class="swiper-slide"> <picture>
+                <source
+                    srcset="./img/pexels@1x.png 1x, ./img/pexels@2x.png 2x "
+                    media="(min-width: 1280px)">
+                <!-- <source
+                    srcset="./img/homepage/homepage-about-rest-img1-for-tablet.jpg 1x, ./img/homepage/homepage-about-rest-img1-for-tablet@2x.jpg 2x"
+                    media="(min-width: 1024px)">
+                <source
+                    srcset="./img/homepage/homepage-about-rest-img1-for-mobile.jpg 1x, ./img/homepage/homepage-about-rest-img1-for-mobile@2x.jpg 2x"
+                    media="(min-width: 384px)"> -->
+  
+                <img class="first-img" src="./img/pexels@1x.png"
+                    alt="trainer in gym">
+            </picture></div>
             </div>
-            <!-- If we need pagination -->
             <div class="swiper-pagination"></div>
-
-            <!-- If we need navigation buttons -->
-            <div class="swiper-button-prev"></div>
-            <div class="swiper-button-next"></div>
-
-            <!-- If we need scrollbar -->
-            <div class="swiper-scrollbar"></div>
           </div>
-
         </div>
       </section>
       <section class="subscription-section">
@@ -258,16 +333,15 @@
       <section class="consultation-section">
         <div class="container">
           <div class="form-wrapper">
-            <form class="consultation-form" action="submit-form" method="POST">
+            <form class="consultation-form modal-form" action="submit-form" method="POST">
               <p class="form-tittle">Залишились запитання?</p>
               <p class="form-subtittle">Залишіть Ваш номер телефону
                 і ми <span class="form-span"> обов'язково з Вами зв'яжемося</span></p>
 
 
-              <input class="name-input" type="text" id="name" name="name" placeholder="Введіть ім'я" required>
+              <input class="name-input" type="text" id="name" name="name" placeholder="Введіть ім'я"  autocomplete="off" required>
 
-
-              <input class="phone-input" type="tel" id="phone" name="phone" placeholder="Введіть ім'я" required>
+              <input class="phone-input" type="tel" id="phone" name="phone" placeholder="Введіть номер телефону" required>
 
               <button class="service-btn" type="submit">Отримати консультацію</button>
 
@@ -287,7 +361,7 @@
             <address class="contacts-address">
 
               <a class="contacts-address-location link" href="https://goo.gl/maps/6rrGSUPAG4NQdzpWA"
-                rel="nofollow noopener" target="_blank">
+              target="_blank" rel="noopener noreferrer nofollow">
                 <svg class="contacts-address-icon" width="25" height="25">
                   <use href='./img/symbol.svg#icon-map-pin' width="24" height="24"></use>
                 </svg>
@@ -315,7 +389,7 @@
             <p class="social-list-parafraph">Підписуйтесь на наші соц. мережі</p>
             <ul class="address-social-list list">
               <li class="social-item">
-                <a class='social-link' href="">
+                <a class='social-link' href="" target="_blank" rel="noopener noreferrer nofollow">
                   <svg class="social-icon" width="22" height="22">
                     <use href='./img/symbol.svg#icon-instagram1' width="22" height="22">
                   </svg>
@@ -323,7 +397,7 @@
 
               </li>
               <li>
-                <a class='link' href="">
+                <a class='link' href="" target="_blank" rel="noopener noreferrer nofollow">
                   <svg class="social-icon" width="22" height="22">
                     <use href='./img/symbol.svg#icon-facebook1' width="22" height="22">
                   </svg>
@@ -391,7 +465,7 @@
           <h3 class="footer-social-tittle">Наші соц. мережі</h3>
           <ul class="footer-social-list list">
             <li class="footer-social-list">
-              <a class='link' href="">
+              <a class='link' href="" target="_blank" rel="noopener noreferrer nofollow">
                 <svg class="footer-social-icon" width="22" height="22">
                   <use href='./img/symbol.svg#icon-instagram1' width="22" height="22">
                   </use>
@@ -400,7 +474,7 @@
 
             </li>
             <li class="footer-social-list">
-              <a class='link' href="">
+              <a class='link' href="" target="_blank" rel="noopener noreferrer nofollow">
                 <svg class="footer-social-icon" width="22" height="22">
                   <use href='./img/symbol.svg#icon-facebook1' width="22" height="22">
                   </use>
@@ -428,3 +502,7 @@
     <script src="index.js" type="module"></script>
   </body>
 </html>
+
+
+
+

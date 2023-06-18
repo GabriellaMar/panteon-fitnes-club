@@ -23,16 +23,32 @@ function onServiceItemClick(event) {
   }
 
 //========================================
-const swiper = new Swiper('.swiper-container', {
-  slidesPerView: 2,
-  spaceBetween: 10,
+const swiper = new Swiper(".mySwiper", {
+  slidesPerView: 3,
+  centeredSlides: false,
+  slidesPerGroup: 1, // Кожен слайд окремо
+  grabCursor: true,
+  keyboard: {
+    enabled: true,
+  },
+  // breakpoints: {
+  //   769: {
+  //     slidesPerView: 2,
+  //     slidesPerGroup: 1,
+  //   },
+  // },
+  scrollbar: {
+    el: ".swiper-scrollbar",
+  },
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
   pagination: {
-    el: '.swiper-pagination',
-    type: 'progressbar'
-  }
+    el: ".swiper-pagination",
+    clickable: true,
+  },
 });
-
-
 //==========================================modal window================
 const bodyElement = document.querySelector('body');
 console.log(bodyElement)
@@ -55,10 +71,17 @@ function renderModalWindovMarkup(){
 
     <button class="service-btn modal-submit-btn" type="submit">Отримати консультацію</button>
 
-    <label class="agreement-label" for="agreement">
-      <input class="agreement-checkbox" type="checkbox" id="agreement" name="agreement" required>
-      Натискаючи на кнопку ви погоджуєтесь з політикою конфіденційності
-    </label>
+    <label for="privacy-policy" class="checkbox-label">
+                <input class="checkbox-input visually-hidden" type="checkbox" name="privacy-policy"
+                    id="privacy-policy">
+                <span class="checkbox-icon-container">
+                    <svg class="checkbox-icon">
+                        <use href="./img/symbol.882dba61.svg#icon-property1" width="13" height="13"></use>
+                    </svg>
+                </span>
+             <a href="" class="privacy-policy-link link"> Натискаючи на кнопку ви погоджуєтесь з політикою конфіденційності
+             </a>
+            </label>
     </form>
 </div>`
 }

@@ -65,10 +65,7 @@
             <li class="social-item">
               <a class='link' href="" target="_blank" rel="noopener noreferrer nofollow">
                 <svg class="social-icon" width="22" height="22">
-                  <!-- <use href='./img/symbol.svg#icon-instagram1' width="22" height="22" > -->
-                    <use href='./img/symbol.svg#icon-close-black' width="22" height="22" ></use>
-
-                  <!-- </use> -->
+                  <use href='./img/symbol.svg#icon-instagram1' width="22" height="22" ></use> 
                 </svg>
               </a>
 
@@ -155,65 +152,39 @@
       <section class="gallery-section">
         <div class="container">
           <h1 class="gallery-title">Галерея</h1>
-          <div class="swiper-container">
+          <div class="swiper mySwiper">
             <div class="swiper-wrapper">
-              <div class="swiper-slide"> <picture>
-                <source
-                    srcset="./img/pexels@1x.png 1x, ./img/pexels@2x.png 2x "
-                    media="(min-width: 1280px)">
-                <!-- <source
-                    srcset="./img/homepage/homepage-about-rest-img1-for-tablet.jpg 1x, ./img/homepage/homepage-about-rest-img1-for-tablet@2x.jpg 2x"
-                    media="(min-width: 1024px)">
-                <source
-                    srcset="./img/homepage/homepage-about-rest-img1-for-mobile.jpg 1x, ./img/homepage/homepage-about-rest-img1-for-mobile@2x.jpg 2x"
-                    media="(min-width: 384px)"> -->
-  
-                <img class="first-img" src="./img/pexels@1x.png"
-                    alt="trainer in gym">
-            </picture></div>
-              <div class="swiper-slide"> <picture>
-                <source
-                    srcset="./img/pexels@1x.png 1x, ./img/pexels@2x.png 2x "
-                    media="(min-width: 1280px)">
-                <!-- <source
-                    srcset="./img/homepage/homepage-about-rest-img1-for-tablet.jpg 1x, ./img/homepage/homepage-about-rest-img1-for-tablet@2x.jpg 2x"
-                    media="(min-width: 1024px)">
-                <source
-                    srcset="./img/homepage/homepage-about-rest-img1-for-mobile.jpg 1x, ./img/homepage/homepage-about-rest-img1-for-mobile@2x.jpg 2x"
-                    media="(min-width: 384px)"> -->
-  
-                <img class="first-img" src="./img/pexels@1x.png"
-                    alt="trainer in gym">
-            </picture></div>
-              <div class="swiper-slide"> <picture>
-                <source
-                    srcset="./img/pexels@1x.png 1x, ./img/pexels@2x.png 2x "
-                    media="(min-width: 1280px)">
-                <!-- <source
-                    srcset="./img/homepage/homepage-about-rest-img1-for-tablet.jpg 1x, ./img/homepage/homepage-about-rest-img1-for-tablet@2x.jpg 2x"
-                    media="(min-width: 1024px)">
-                <source
-                    srcset="./img/homepage/homepage-about-rest-img1-for-mobile.jpg 1x, ./img/homepage/homepage-about-rest-img1-for-mobile@2x.jpg 2x"
-                    media="(min-width: 384px)"> -->
-  
-                <img class="first-img" src="./img/pexels@1x.png"
-                    alt="trainer in gym">
-            </picture></div>
-              <div class="swiper-slide"> <picture>
-                <source
-                    srcset="./img/pexels@1x.png 1x, ./img/pexels@2x.png 2x "
-                    media="(min-width: 1280px)">
-                <!-- <source
-                    srcset="./img/homepage/homepage-about-rest-img1-for-tablet.jpg 1x, ./img/homepage/homepage-about-rest-img1-for-tablet@2x.jpg 2x"
-                    media="(min-width: 1024px)">
-                <source
-                    srcset="./img/homepage/homepage-about-rest-img1-for-mobile.jpg 1x, ./img/homepage/homepage-about-rest-img1-for-mobile@2x.jpg 2x"
-                    media="(min-width: 384px)"> -->
-  
-                <img class="first-img" src="./img/pexels@1x.png"
-                    alt="trainer in gym">
-            </picture></div>
+              <div class="swiper-slide">
+                <img src="https://cdn.magloft.com/github/swiper/images/page-001.jpg" />
+              </div>
+              <div class="swiper-slide">
+                <img src="https://cdn.magloft.com/github/swiper/images/page-002.jpg" />
+              </div>
+              <div class="swiper-slide">
+                <img src="https://cdn.magloft.com/github/swiper/images/page-003.jpg" />
+              </div>
+              <div class="swiper-slide">
+                <img src="https://cdn.magloft.com/github/swiper/images/page-004.jpg" />
+              </div>
+              <div class="swiper-slide">
+                <img src="https://cdn.magloft.com/github/swiper/images/page-005.jpg" />
+              </div>
+              <div class="swiper-slide">
+                <img src="https://cdn.magloft.com/github/swiper/images/page-006.jpg" />
+              </div>
+              <div class="swiper-slide">
+                <img src="https://cdn.magloft.com/github/swiper/images/page-007.jpg" />
+              </div>
+              <div class="swiper-slide">
+                <img src="https://cdn.magloft.com/github/swiper/images/page-008.jpg" />
+              </div>
+              <div class="swiper-slide">
+                <img src="https://cdn.magloft.com/github/swiper/images/page-009.jpg" />
+              </div>
             </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-scrollbar"></div>
             <div class="swiper-pagination"></div>
           </div>
         </div>
@@ -344,11 +315,17 @@
               <input class="phone-input" type="tel" id="phone" name="phone" placeholder="Введіть номер телефону" required>
 
               <button class="service-btn" type="submit">Отримати консультацію</button>
-
-              <label class="agreement-label" for="agreement">
-                <input class="agreement-checkbox" type="checkbox" id="agreement" name="agreement" required>
-                Натискаючи на кнопку ви погоджуєтесь з політикою конфіденційності
-              </label>
+              <label for="privacy-policy" class="checkbox-label">
+                <input class="checkbox-input visually-hidden" type="checkbox" name="privacy-policy"
+                    id="privacy-policy">
+                <span class="checkbox-icon-container">
+                    <svg class="checkbox-icon">
+                        <use href="./img/symbol.svg#icon-property1" width="13" height="13"></use>
+                    </svg>
+                </span>
+             <a href="" class="privacy-policy-link link"> Натискаючи на кнопку ви погоджуєтесь <br>з політикою конфіденційності
+             </a>
+            </label>
           </div>
           </form>
         </div>

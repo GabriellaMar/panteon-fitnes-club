@@ -23,32 +23,132 @@ function onServiceItemClick(event) {
   }
 
 //========================================
-const swiper = new Swiper(".mySwiper", {
+
+//========================================
+//  const swiper = new Swiper(".mySwiper", {
+//    slidesPerView: 4,
+//   //  centeredSlides: false,
+//    spaceBetween: 0,
+//   //  loop: true,
+//   //  loopedSlides: 4,
+//   //  slidesPerGroup: 1, // Кожен слайд окремо
+//    grabCursor: true,
+//    keyboard: {
+//        enabled: true,
+//   },
+//     breakpoints: {
+//       1440: {
+//        slidesPerView: 4,
+//       //  slidesPerGroup: 1,
+//       },
+//       768: {
+//         slidesPerView: 2,
+//        //  slidesPerGroup: 1,
+//        },
+//     },
+
+//    scrollbar: {
+//      el: ".swiper-scrollbar",
+//       draggable: true,
+//     //  snapOnRelease: false,
+//    },
+//    navigation: {
+//      nextEl: ".swiper-button-next",
+//      prevEl: ".swiper-button-prev",
+//    },
+
+//  });
+//  const secondSwiper = new Swiper(".swiper-container", {
+//   slidesPerView: 3,
+//   spaceBetween: 10,
+//   loop: true,
+//   grabCursor: true,
+//   keyboard: {
+//     enabled: true,
+//   },
+//   breakpoints: {
+//     1440: {
+//       slidesPerView: 4,
+//     },
+//   },
+
+//   scrollbar: {
+//     el: ".swiper-scrollbar",
+//     draggable: true,
+//    //  snapOnRelease: false,
+//   },
+//   navigation: {
+//     nextEl: ".swiper-button-next",
+//     prevEl: ".swiper-button-prev",
+//   },
+// }
+//  )
+
+const swiper = new Swiper(".trainers-swiper", {
   slidesPerView: 3,
-  centeredSlides: false,
-  slidesPerGroup: 1, // Кожен слайд окремо
-  grabCursor: true,
-  keyboard: {
-    enabled: true,
-  },
-  // breakpoints: {
-  //   769: {
-  //     slidesPerView: 2,
-  //     slidesPerGroup: 1,
-  //   },
-  // },
-  scrollbar: {
-    el: ".swiper-scrollbar",
-  },
+  spaceBetween: 20,
   navigation: {
-    nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
+    nextEl: ".swiper-button-next",
+   
   },
-  pagination: {
-    el: ".swiper-pagination",
-    clickable: true,
-  },
+
+  freeMode: true,
+    speed: 1500,
+
+    autoplay: {
+      delay: 2000,
+    },
+  
+  loop: true,
+    // Дозволяємо циклічний перехід слайдів
+  // autoplay: {
+  //   delay: 5000, // Затримка між переходами у мілісекундах
+  //   disableOnInteraction: false, // Вимкнути автоматичний рух при взаємодії користувача
+  // },
 });
+// const swiper = new Swiper(".mySwiper", {
+//   slidesPerView: 4, // Відображати 4 слайди
+//   spaceBetween: 30, // Відстань між слайдами
+//   scrollbar: {
+//     el: ".swiper-scrollbar",
+//     hide: false,
+//   },
+// });
+// const swiper = new Swiper(".mySwiper", {
+  // slidesPerView: 4,
+  // spaceBetween: 30,
+  // freeMode: true,
+  // scrollbar: {
+  //   el: ".swiper-scrollbar",
+  //   type: "progressbar",
+  // },
+  // pagination: {
+  //   // el: ".swiper-pagination",
+  //   el: ".swiper-scrollbar",
+  //   //  clickable: true,
+  //   // type: "progressbar",
+  // },
+  // navigation: {
+  //   nextEl: ".swiper-button-next",
+  //   prevEl: ".swiper-button-prev",
+  //   clickable: true,
+  // },
+// });
+
+// pagination: {
+//   el: ".swiper-pagination",
+//   type: "progressbar",
+// },
+// navigation: {
+//   nextEl: ".swiper-button-next",
+//   prevEl: ".swiper-button-prev",
+// },
+
+
+
+
+
 //==========================================modal window================
 const bodyElement = document.querySelector('body');
 console.log(bodyElement)
@@ -219,3 +319,44 @@ function onModalSubmit(e) {
   document.addEventListener('keydown', closeModalOnKeyPress);
 }
 }
+
+
+//------------ховер таблиця з з прайсом----------------
+const tableData = document.querySelectorAll('.table-data');
+
+tableData.forEach((tableEl) => {
+  tableEl.addEventListener('mouseover', () => {
+    const tableRow = tableEl.closest('.table-row');
+    const firstTableColumn = tableRow.querySelector('.table-data:first-child');
+    const columnIndex = Array.from(tableRow.children).indexOf(tableEl);
+    const tableTittles = document.querySelectorAll('.table-head .table-title');
+
+    firstTableColumn.style.color = '#F7931E';
+    tableTittles[columnIndex].style.color = '#F7931E';
+  });
+
+  tableEl.addEventListener('mouseout', () => {
+    const tableRow = tableEl.closest('.table-row');
+    const firstTableColumn = tableRow.querySelector('.table-data:first-child');
+    const tableChildren = Array.from(tableRow.querySelectorAll('.table-data'));
+    
+    const columnIndex = tableChildren.findIndex((element) => element === tableEl);     
+    const tableTittles = document.querySelectorAll('.table-head .table-title');
+
+    firstTableColumn.style.color = '';
+    tableTittles[columnIndex].style.color = '';
+  });
+});
+// function onMouseOver(){
+//   const firstTableColumn = document.querySelectorAll('.table-data:first-child')
+//   console.log(firstTableColumn)
+
+  // firstTableColumn.forEach((tableColumn)=>{tableColumn.style.color = '#F7931E'})
+  // const tableTittle = document.querySelectorAll('.table-title');
+
+  // tableTittle.forEach((tittle)=>{tittle.style.color = '#F7931E'})
+
+//   firstTableColumn.forEach((tableColumn)=>{tableColumn.style.color = ''})
+// }
+// const tableTittle = document.querySelectorAll('.table-title');
+// tableTittle.forEach((tittle)=>{tittle.addEventListener('mouseover', onMouseOver)})

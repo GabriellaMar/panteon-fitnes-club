@@ -1,7 +1,10 @@
 import {closeModalOnKeyPress} from '../listeners/onCloseModal'
-export function renderSuccesModalContent(modalWindow) {
-    // const modalWindow = instance.element().querySelector('.modal-window');
-   modalWindow.innerHTML = `
+import { instance } from "../listeners/onConsultationMainBtnClick";
+// import { closeModal } from '../listeners/onCloseModal';
+// import * as basicLightbox from 'basiclightbox'
+export function renderSuccesModalContent() {
+   
+    document.querySelector('.modal-window').innerHTML = `
    <div class="modal-submit-wrapper">
    <a href="" class="modal-logo-link">
    <img  class="modal-logo-icon" src="/logo.726d37a8.png" alt="logo-picture">
@@ -54,7 +57,7 @@ export function renderSuccesModalContent(modalWindow) {
  </div>
    `;
    
-   modalWindow.querySelector('.modal-form-close-btn')
+   document.querySelector('.modal-window').querySelector('.modal-form-close-btn')
    .addEventListener('click', () => {
      instance.close();
    });

@@ -3,17 +3,23 @@ import Notiflix from 'notiflix';
 // import Swiper from 'swiper/swiper-bundle';
 // import 'swiper/swiper-bundle.css';
 import { firstGallarySwiper, secondGallarySwiper, trainersSwiper } from './initialize-swiper';
-import { renderModalWindovMarkup  } from './markups/rendermodalwindowMarkup';
+ import { renderModalWindowMarkup } from './markups/renderModalWindowMarkup';
 import { renderSuccesModalContent } from './markups/modalWindowContent';
+
 import { renderSuccesModalWindow } from './markups/renderModalSuccesMarkup';
-import { onConsultationMainBtnClick } from './listeners/onConsultationMainBtnClick';
+ import { onConsultationMainBtnClick } from './listeners/onConsultationMainBtnClick';
 import { onConsultationButtonClick } from './listeners/onConsultationButtonClick';
 import { onModalSubmit } from './listeners/onModalSubmit';
 import { closeModalOnKeyPress, closeModal } from './listeners/onCloseModal';
 import { onServiceItemClick } from './listeners/onServiceItemclick';
-
+import SimpleBar from 'simplebar';
+import 'simplebar/dist/simplebar.css';
 
 import * as basicLightbox from 'basiclightbox'
+
+
+
+
 
 // const currentService = document.querySelectorAll('.service-item');
 
@@ -32,173 +38,157 @@ import * as basicLightbox from 'basiclightbox'
 //     currentService.classList.add('current-service');
 //   }
 
-//========================================
-
-//========================================
-
-// const firstGallarySwiper = new Swiper(".gallary-swiper", {
-//   slidesPerView: 3,
-//   direction: 'horizontal',
-//   navigation: {
-//     prevEl: ".gallary-slide-btn-prev",
-//     nextEl: ".gallary-slide-btn-next",
-//   },
-//   scrollbar: {
-//     el: ".gallary-slide-scrollbar",
-//     clickable: true,
-//     draggable: true,
-//      },
-
-//   freeMode: true,
-//     speed: 1500,
-
-//     autoplay: {
-//       delay: 2000,
-//     },
-  
-//   loop: true,
-   
-// });
-
-// const secondGallarySwiper = new Swiper(".gallary-admin-swiper", {
-//   slidesPerView: 4,
-//   direction: 'horizontal',
-//   navigation: {
-//     prevEl: ".gallary-admin-btn-prev",
-//     nextEl: ".gallary-admin-btn-next",
-//   },
-//   scrollbar: {
-//     el: ".gallary-admin-scrollbar",
-//     clickable: true,
-//     draggable: true,
-//      },
-
-//   freeMode: true,
-//     speed: 1500,
-
-//     autoplay: {
-//       delay: 2000,
-//     },
-//   loop: true,
-// });
-
-// const trainersSwiper = new Swiper(".trainers-swiper", {
-//   slidesPerView: 3,
-//   spaceBetween: 20,
- 
-//   navigation: {
-//     prevEl: ".trainer-slide-btn-prev",
-//     nextEl: ".trainer-slide-btn-next",
-//   },
-
-//   freeMode: true,
-//     speed: 1500,
-
-//     autoplay: {
-//       delay: 2000,
-//     },
-  
-//   loop: true,
-   
+//---------------Cкрол бар для таблиць----------------
+// const container = document.querySelector('#container');
+// const ps = new PerfectScrollbar(container, {
+//   alwaysShowTracks: true,
+//   suppressScrollY: true,
+//   wheelSpeed: 2,
+//   wheelPropagation: true,
+//   minScrollbarLength: 20
 // });
 
 
 
 //------------ховер таблиця з з прайсом----------------
-const tableData = document.querySelectorAll('.table-data');
+const subscriptionTables = document.querySelectorAll('.subscription-table, .time-subscription-table');
 
-tableData.forEach((tableEl) => {
-  tableEl.addEventListener('mouseover', () => {
-    const tableRow = tableEl.closest('.table-row');
-    const firstTableColumn = tableRow.querySelector('.table-data:first-child');
-    const columnIndex = Array.from(tableRow.children).indexOf(tableEl);
-    const tableTittles = document.querySelectorAll('.table-head .table-title');
+subscriptionTables.forEach((table) => {
+  table.addEventListener('mouseover', (event) => {
+    const target = event.target;
+    if (target.classList.contains('table-data')) {
+      const tableRow = target.closest('.table-row');
+      const firstTableColumn = tableRow.querySelector('.table-data:first-child');
+      const columnIndex = Array.from(tableRow.children).indexOf(target);
+      const tableTittles = table.querySelectorAll('.table-title');
 
-    firstTableColumn.style.color = '#F7931E';
-    tableTittles[columnIndex].style.color = '#F7931E';
+      firstTableColumn.style.color = '#F7931E';
+      tableTittles[columnIndex].style.color = '#F7931E';
+    }
   });
 
-  tableEl.addEventListener('mouseout', () => {
-    const tableRow = tableEl.closest('.table-row');
-    const firstTableColumn = tableRow.querySelector('.table-data:first-child');
-    const tableChildren = Array.from(tableRow.querySelectorAll('.table-data'));
-    
-    const columnIndex = tableChildren.findIndex((element) => element === tableEl);     
-    const tableTittles = document.querySelectorAll('.table-head .table-title');
+  table.addEventListener('mouseout', (event) => {
+    const target = event.target;
+    if (target.classList.contains('table-data')) {
+      const tableRow = target.closest('.table-row');
+      const firstTableColumn = tableRow.querySelector('.table-data:first-child');
+      const tableChildren = Array.from(tableRow.querySelectorAll('.table-data'));
+      const columnIndex = tableChildren.findIndex((element) => element === target);
+      const tableTittles = table.querySelectorAll('.table-title');
 
-    firstTableColumn.style.color = '';
-    tableTittles[columnIndex].style.color = '';
+      firstTableColumn.style.color = '';
+      tableTittles[columnIndex].style.color = '';
+    }
   });
 });
-
 //==========================================modal window SUBMIT for main-btn================
 
- const consultationBtn = document.querySelector('.main-btn')
-
- const bodyElement = document.body;
- consultationBtn.addEventListener('click', onConsultationMainBtnClick)
- let instance;
- function  onConsultationMainBtnClick(e) {
-  // const bodyElement = document.body;
-    bodyElement.style.overflow = 'hidden';
-//     //  Loading.standard('Loading...', {
-//     //    backgroundColor: 'rgba(0,0,0,0.8)',
-//     //    svgColor: 'rgb(248, 119, 25)',
-//     //  });
-     const markup =  renderModalWindovMarkup();
-
-     instance = basicLightbox.create(markup, {
-       closable: true,
-       onShow: instance => {
-         instance.element().querySelector('.modal-form-close-btn')
-          .addEventListener('click', () => {
-            instance.close();
-             bodyElement.style.overflow = 'auto';
-           });
-        document.addEventListener('keydown', closeModalOnKeyPress);
-      },
-       onClose: instance => {
-         instance.element().querySelector('.modal-form-close-btn')
-           .removeEventListener('click', () => {
-              instance.close();
-                bodyElement.style.overflow = 'auto';
-           });
-         document.removeEventListener('keydown', closeModalOnKeyPress);
-          bodyElement.style.overflow = 'auto';
-       
-       },
-       onOverlayClick: () => {
-         closeModal()
-       },
-     });
-     instance.show();
-
-    const modalForm = instance.element().querySelector('.consultation-form');
-     modalForm.addEventListener('submit', onModalSubmit);
-//     //  Loading.remove();
- }
-
- /*-------Відправка даних (submit) , та відкриття модального вікна про успішність відправки даних----*/
- function onModalSubmit(e) {
-   e.preventDefault(); 
-   const formEl = e.currentTarget;
-   const inputValue = formEl.elements.name.value.trim();
-   const inputPhone = formEl.elements.phone.value.trim();
-
-
-   if (!inputValue ||  !inputValue.match(/^[A-Za-zА-Яа-яІіЇїЄєҐґ\s]+$/) || !inputPhone || !inputPhone.match(/^\d{10}$/)) {
-    
-    Notiflix.Notify.failure('Ви ввели неправильні дані. Будь ласка, спробуйте ще раз');     return;
-   } 
-   renderSuccesModalContent()
+//  const consultationBtn = document.querySelector('.main-btn')
+// console.log(consultationBtn)
+// //  const bodyElement = document.body;
+//  consultationBtn.addEventListener('click', onConsultationMainBtnClick )
  
-   modalWindow.querySelector('.modal-form-close-btn')
-     .addEventListener('click', () => {
-       instance.close();
-    });
-   document.addEventListener('keydown', closeModalOnKeyPress);
- }
+//  let instance;
 
+//  export function renderModalWindowMarkup(){
+//   return ` <div class="modal-window">
+//   <button class="modal-form-close-btn" width="40" height="40">
+//   <svg class="modal-form-close-icon" width="100%" height="100%">
+//   <use href="/symbol.882dba61.svg#icon-close-black" ></use>
+//   </svg>
+//   </button>
+//   <form class="consultation-form modal-form" action="submit-form" >
+//     <p class="form-tittle">Залишились запитання?</p>
+//     <p class="form-subtittle">Залишіть Ваш номер телефону
+//       і ми <span class="form-span"> обов'язково з Вами зв'яжемося</span></p>
+
+//     <input class="name-input" type="text" id="name" name="name" placeholder="Введіть ім'я" required>
+
+//     <input class="phone-input" type="tel" id="phone" name="phone" placeholder="Введіть номер телефону" required>
+
+//     <button class="service-btn modal-submit-btn" type="submit">Отримати консультацію</button>
+
+//              <a href="" class="privacy-policy-link link"> Натискаючи на кнопку ви погоджуєтесь з політикою конфіденційності
+//              </a>
+//     </form>
+// </div>`
+// }
+
+//  function  onConsultationMainBtnClick(e) {
+  
+//    const bodyElement = document.body;
+//     bodyElement.style.overflow = 'hidden';
+// //     //  Loading.standard('Loading...', {
+// //     //    backgroundColor: 'rgba(0,0,0,0.8)',
+// //     //    svgColor: 'rgb(248, 119, 25)',
+// //     //  });
+
+//      const markup = renderModalWindowMarkup();
+
+//      instance = basicLightbox.create(markup, {
+//        closable: true,
+//        onShow: instance => {
+//          instance.element().querySelector('.modal-form-close-btn')
+//           .addEventListener('click', () => {
+//             instance.close();
+//              bodyElement.style.overflow = 'auto';
+//            });
+//         document.addEventListener('keydown', closeModalOnKeyPress);
+//       },
+//        onClose: instance => {
+//          instance.element().querySelector('.modal-form-close-btn')
+//            .removeEventListener('click', () => {
+//               instance.close();
+//                 bodyElement.style.overflow = 'auto';
+//            });
+//          document.removeEventListener('keydown', closeModalOnKeyPress);
+//           bodyElement.style.overflow = 'auto';
+       
+//        },
+//        onOverlayClick: () => {
+//          closeModal()
+//        },
+//      });
+//      instance.show();
+
+//     const modalForm = instance.element().querySelector('.modal-form');
+//      modalForm.addEventListener('submit', onModalSubmit);
+// //     //  Loading.remove();
+//  }
+
+//  /*-------Відправка даних (submit) , та відкриття модального вікна про успішність відправки даних----*/
+//  function onModalSubmit(e) {
+//    e.preventDefault(); 
+//    const formEl = e.currentTarget;
+//    const inputValue = formEl.elements.name.value.trim();
+//    const inputPhone = formEl.elements.phone.value.trim();
+
+
+//    if (!inputValue ||  !inputValue.match(/^[A-Za-zА-Яа-яІіЇїЄєҐґ\s]+$/) || !inputPhone || !inputPhone.match(/^\d{10}$/)) {
+    
+//     Notiflix.Notify.failure('Ви ввели неправильні дані. Будь ласка, спробуйте ще раз');     return;
+//    } 
+//    renderSuccesModalContent()
+ 
+//    modalWindow.querySelector('.modal-form-close-btn')
+//      .addEventListener('click', () => {
+//        instance.close();
+//     });
+//    document.addEventListener('keydown', closeModalOnKeyPress);
+//  }
+//  export function closeModalOnKeyPress(e) {
+//   if (e.code !== 'Escape') return;
+//   const bodyElement = document.body;
+//   instance.close();
+//    bodyElement.style.overflow = 'auto';
+//   document.removeEventListener('keydown', closeModalOnKeyPress);
+// }
+
+// export function closeModal() {
+//   const bodyElement = document.body;
+//   instance.close();
+//    bodyElement.style.overflow = 'auto';
+// }
 // function renderModalWindovMarkup(){
 //   return ` <div class="modal-window">
 //   <button class="modal-form-close-btn" width="40" height="40">

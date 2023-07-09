@@ -14,6 +14,17 @@ import 'swiper/swiper-bundle.css';
       clickable: true,
       draggable: true,
        },
+       breakpoints: {
+        320: {
+          slidesPerView: 1,
+        },
+        768: {
+          slidesPerView: 2,
+        },
+        920: {
+          slidesPerView: 3,
+        },
+      },
   
     freeMode: true,
       speed: 1500,
@@ -38,6 +49,17 @@ import 'swiper/swiper-bundle.css';
       clickable: true,
       draggable: true,
        },
+       breakpoints: {
+        320: {
+          slidesPerView: 1,
+        },
+        768: {
+          slidesPerView: 2,
+        },
+        920: {
+          slidesPerView: 4,
+        },
+      },
   
     freeMode: true,
       speed: 1500,
@@ -55,6 +77,17 @@ export const trainersSwiper = new Swiper(".trainers-swiper", {
     navigation: {
       prevEl: ".trainer-slide-btn-prev",
       nextEl: ".trainer-slide-btn-next",
+    },
+    breakpoints: {
+      320: {
+        slidesPerView: 1,
+      },
+      768: {
+        slidesPerView: 2,
+      },
+      920: {
+        slidesPerView: 3,
+      },
     },
   
     freeMode: true,

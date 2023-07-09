@@ -55,5 +55,8 @@
 </symbol>
 <symbol id="icon-property1" viewBox="0 0 32 32"><path fill="#F7931E" d="M4 1.25h24A2.75 2.75 0 0 1 30.75 4v24A2.75 2.75 0 0 1 28 30.75H4A2.75 2.75 0 0 1 1.25 28V4A2.75 2.75 0 0 1 4 1.25z" style="fill:var(--color1, #F7931E)"/><path fill="#F7931E" d="M22.891 8.51a1.832 1.832 0 0 1 2.558.02 1.855 1.855 0 0 1 .068 2.571L15.728 23.41a1.845 1.845 0 0 1-1.314.591 1.83 1.83 0 0 1-1.336-.542l-6.492-6.527a1.863 1.863 0 0 1-.451-2.046 1.85 1.85 0 0 1 1.017-1.022 1.823 1.823 0 0 1 1.438.026c.225.101.429.247.597.429l5.137 5.163 8.521-10.915a.628.628 0 0 1 .049-.054h-.002z" style="fill:var(--color2, #f4f4fd)"/><path fill="none" stroke="#4d5ae5" stroke-width="2.5" d="M4 1.25h24A2.75 2.75 0 0 1 30.75 4v24A2.75 2.75 0 0 1 28 30.75H4A2.75 2.75 0 0 1 1.25 28V4A2.75 2.75 0 0 1 4 1.25z" style="stroke:var(--color1, #4d5ae5)"/>
 </symbol>
+<symbol id="icon-burger" width="25" height="25" viewBox="0 0 21 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M2.29688 1.64062H18.7031M2.29688 14.1406H18.7031H2.29688ZM2.29688 7.89062H18.7031H2.29688Z" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+</symbol>
 </defs>
 </svg>

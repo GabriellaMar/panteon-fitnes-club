@@ -1,5 +1,7 @@
 import { renderSuccesModalContent } from '../markups/modalWindowContent';
 import { closeModalOnKeyPress } from '../listeners/onCloseModal';
+import { renderSuccesModalContent } from '../markups/modalWindowContent';
+import { instance } from './onConsultationMainBtnClick';
 
 export function onModalSubmit(e) {
   e.preventDefault();
@@ -14,7 +16,7 @@ export function onModalSubmit(e) {
 
   renderSuccesModalContent();
 
-    modalWindow.querySelector('.modal-form-close-btn')
+  document.querySelector('.modal-window').querySelector('.modal-form-close-btn')
       .addEventListener('click', () => {
         instance.close();
       });

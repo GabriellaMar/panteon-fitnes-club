@@ -3,8 +3,14 @@
 /*----------Header  section and Hero section--------------------*/
 
 @media screen and (max-width: 768px) {
-    .container {
+    /* .container {
+       max-width: 320px; 
         padding: 0px 15px;
+      } */
+
+      .container {
+        max-width: 320px;
+        padding: 0 15px;
       }
     .header-nav{
         display: none;
@@ -157,14 +163,14 @@
     }
   .first-img{
     position: static;
-    width: 290px;
+    width: 100%;
     margin-bottom: 30px;
     margin-top: 40px;
   }
   
   .second-img{
     position: static;
-    width: 290px;
+    width:100%;
 }
 .service-list-wrapper>.service-list{
     display: flex;
@@ -239,6 +245,28 @@
         min-width: 300px;
         min-height: 280px; 
       }
+
+      .gallary-admin-btn-prev.swiper-button-prev,
+      .gallary-slide-btn-prev.swiper-button-prev{
+     
+        display: none;
+      } 
+      .gallary-admin-btn-next.swiper-button-next,
+      .gallary-slide-btn-next.swiper-button-next{
+       
+        display: none;
+      } 
+      
+      .gallary-slide-scrollbar.swiper-scrollbar-horizontal,
+      .gallary-admin-scrollbar.swiper-scrollbar-horizontal
+      {
+        background-color: #ffffff;
+        max-width: 100%;
+        bottom: -30px;
+       
+      }
+
+
       .subscription-tittle
       {
         
@@ -310,18 +338,52 @@
         padding-top: 80px;
         padding-bottom: 90px;
       }
+
       .trainers-slider{
-        display: contents;
-        flex-direction: column;
+   
+        display: block;
+    width: 100%;
+    max-width: 250px;
+    align-items: center;
+    gap: 30px;
       }
+
+
       .trainers-slide{
-        display: flex;
-        flex-direction: column;
+        position: relative;
+        display: block;
         width: 250px;
         height: 479px;
-        margin: 0;
+        /* margin: 0; */
         margin-right: 30px;
       }
+
+      .trainers-slide-wrapper{
+        position: relative;
+        min-width: 0;
+        /* margin-bottom: 30px; */
+       
+      }
+      .trainer-slider-btn-wrapper {
+        display: none;
+       }
+
+       .trainer-slide-scrollbar.swiper-scrollbar-horizontal
+       {
+         background-color: #ffffff;
+         bottom: 15px;
+         /* left: 128px; */
+         max-width: 100%;
+       }
+       
+       .trainer-slide-scrollbar .swiper-scrollbar-drag,
+       .trainer-slide-scrollbar .swiper-scrollbar-drag{
+         background-color: #f7931e;
+         top:-3px;
+         height: 10px;
+         width: 200px; 
+       }  
+
 
       .consultation-section{
         padding: 80px 0px;
@@ -342,7 +404,133 @@
           background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../img/pexels-ivan-samkov-41@2x.jpg);
       }
     } 
+
+    .contacts-section {
+      padding: 0;
+     
+    } 
+     .contacts-wrap{
+      position: relative;
+     top: 0;
+     left: 0;
+      max-width: 320px;
+      height: 235px;
+   
+    }
+    /* .contacts-section {
+      position: relative;
+      padding-top: 0px;
+  
+      overflow: hidden;
+      min-height: 683px; 
+    } */
     
+    .contacts-address-map{
+      position:absolute;
+   
+      width: 100%;
+      height: 100%;
+    }
+
+
+    .contacts-address-wrapper{
+      position: static;
+      font-family: 'Montserrat', sans-serif; 
+      font-size: 14px;
+      line-height: calc(24/14);
+      padding: 50px 15px ;
+    width: 320px;
+    height: 449px;
+    padding: 50px 35px 55px 35px;
+    z-index: 1;
+    color: #FFF;
+    background-color: #0C1417;
+  }
+
+  .contacts-tittle {
+    text-align: center;
+    margin-top: 0;
+    font-size: 25px;
+    line-height: calc(34/25); 
+  }
+  .contacts-address-location {
+   margin-bottom: 30px;
+ }
+ .footer{
+  padding:50px 0px ;
+  background-color: black;
+  min-height: 458px;
+ }
+
+ .footer>.container{
+  display: flex;
+  /* gap: 50px; */
+  flex-direction: column;
+}
+
+.about-us-item,
+.subscription-item{
+  display: none;
+}
+.address-paragraph{
+  display:none ;
+}
+ .footer-logo-wrapper{
+  display: flex;
+  top:0px;
+  justify-content: space-between;
+  margin-bottom: 30px;
+ }
+
+ .footer-logo-link img{
+  width: 130px;
+    height: 45px;
+    margin-left: -19px;
+ }
+
+ .footer-social-list{
+  display: flex;
+  flex-direction: column;
+  
+}
+.footer-addres-item:not(last-child){
+  margin-bottom: 10px;
+}
+
+.footer-social-list{
+  display: flex;
+  flex-direction: row;
+  height: 24px;
+  justify-content: flex-start;
+  margin-bottom: 30px;
+ 
+}
+.footer-mobile-open-icon{
+  margin-left: 152px;
+  cursor: pointer;
+
+}
+
+.footer-modal-window {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+ min-height: 458px;
+  z-index: 3;
+  background-color: rgba(0, 0, 0, 0.85);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.footer-modal-wrapper {
+  max-width: 100%;
+  max-height: 337px;
+  overflow-y: auto;
+  background-color: #ffffff;
+  padding: 20px;
+}  
+}
 
       /* .subscription-table,
 .time-subscription-table {
@@ -383,5 +571,5 @@
   position: relative;
   width: 319px;
 } */
-} 
+ 
 

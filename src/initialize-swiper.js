@@ -21,8 +21,8 @@ import 'swiper/swiper-bundle.css';
         768: {
           slidesPerView: 2,
         },
-        920: {
-          slidesPerView: 3,
+        1440: {
+          slidesPerView: 4,
         },
       },
   
@@ -38,7 +38,7 @@ import 'swiper/swiper-bundle.css';
   });
   
  export const secondGallarySwiper = new Swiper(".gallary-admin-swiper", {
-    slidesPerView: 4,
+    // slidesPerView: 4,
     direction: 'horizontal',
     navigation: {
       prevEl: ".gallary-admin-btn-prev",
@@ -56,7 +56,7 @@ import 'swiper/swiper-bundle.css';
         768: {
           slidesPerView: 2,
         },
-        920: {
+        1440: {
           slidesPerView: 4,
         },
       },
@@ -78,6 +78,12 @@ export const trainersSwiper = new Swiper(".trainers-swiper", {
       prevEl: ".trainer-slide-btn-prev",
       nextEl: ".trainer-slide-btn-next",
     },
+    scrollbar: {
+      el: ".trainer-slide-scrollbar",
+      clickable: true,
+      draggable: true,
+       },
+       
     breakpoints: {
       320: {
         slidesPerView: 1,
@@ -85,7 +91,7 @@ export const trainersSwiper = new Swiper(".trainers-swiper", {
       768: {
         slidesPerView: 2,
       },
-      920: {
+      1440: {
         slidesPerView: 3,
       },
     },

@@ -6,13 +6,13 @@ export function renderSuccesModalWindow() {
     <img  class="modal-logo-icon" src="/logo.726d37a8.png" alt="logo-picture">
     </a>
     <button class="modal-form-close-btn" width="40" height="40">
-    <svg class="modal-form-close-icon" width="100%" height="100%">
+    <svg class="modal-form-close-icon">
     <use href="/symbol.882dba61.svg#icon-close-black" ></use>
     </svg>
     </button>
     <p class="modal-tittle">
-    <svg class="modal-social-icon" width="40" height="30">
-    <use href="/symbol.882dba61.svg#icon-done" width="40" height="30"></use>
+    <svg class="modal-social-icon" width="30" height="2">
+    <use href="/symbol.882dba61.svg#icon-done" width="30" height="20"></use>
     </svg>
     Дані успішно надіслані</p>
     <p class="modal-subtittle">Ми зв'яжемося з вами найближчим часом</p>

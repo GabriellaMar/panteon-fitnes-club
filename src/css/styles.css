@@ -79,12 +79,11 @@ button {
   margin: -1px;
 }
 /* ---------------------Header-----------------------*/
-  .header-section{margin: 0 auto;}
+  .header-section{margin: 0 auto;
+  }
 .header-wrapper{
     display: flex;
-     align-items: center; 
-      /* justify-content: space-between;   */
-     /* justify-content: center; */
+     align-items: center;   
   }
 
   .header {
@@ -101,21 +100,12 @@ button {
     background-color: transparent;
     border: none;
   }
-.mobile-open-icon{
-  stroke: #FFFFFF;
-  background-color: transparent;
-}
+
+
 .logo-link{
   margin-left: -30px;
 }
-  
-  /* .hero-wrapper{
-    height: 100vh; /* встановлюється висота на весь екран */
-     /* display: flex;
-    flex-direction: column;  */
-     /* justify-content: center;
-    align-items: center;  */
-  /* }  */
+
 
   .nav-list{
     padding-top: 20px;
@@ -521,16 +511,6 @@ top: 75;
  
 }
  
-  /* .gallary-tittle,
-  .trainer-tittle{
-    font-family: 'Montserrat', sans-serif; 
-    font-weight: 700;
-    font-size: 30px;
-    line-height: calc(34/30);
-    margin-bottom: 80px;
-    color: #FFFFFF;
-  text-align: center;
-}  */
 
 .gallary-admin-slider,
 .gallary-slider{
@@ -1257,13 +1237,12 @@ z-index: 1;
   color:rgba(255, 255, 255, 0.7)
 }
 
-.footer-logo-wrapper{
-  /* position: absolute; */
+/* .footer-logo-wrapper{
   position: relative;
   top:-30;
    text-align: center; 
 
-}
+} */
 /* .footer-logo-link{
   position: relative;
   left: -10;
@@ -1316,25 +1295,22 @@ z-index: 1;
 }
 
 /*----------------ModalWindow-------------------------*/
+
 .modal-window{
    position: absolute;
   top: 50%;
   left: 50%;
-  /* font-family: 'Roboto-Medium', sans-serif; */
-  /* font-size: 14px;
-  line-height: calc(16 / 14); */
+ 
   padding: 50px;
   width: 900px;
-  height: 539px;
 
   background-color:#0C1417;
   transform: translate(-50%, -50%) scale(1);
   box-shadow: 1px 1px 14px 4px rgba(255, 107, 8, 0.42);
-  /* opacity: 1; */
-  max-height: 539px;
+
+  /* max-height: 539px; */
   overflow-y: auto;
   display: flex;
-  /* flex-direction: column; */
   align-items: center;
   justify-content: center;
 }
@@ -1433,24 +1409,22 @@ color: #FFFFFF;
   color: #FFFFFF
 }
 
-.modal-contact-wrapper{
+/* .modal-contact-wrapper{
   display: flex;
-  /* align-items: center; */
   gap: 25px;
-}
+} */
 
 .modal-contact-wrapper>.modal-address{
   display: flex;
   gap: 20px;
-  margin-top: 30px;
+  /* margin-top: 30px; */
 }
 .modal-logo-icon{
   position: absolute;
-  /* width: 173px;
-  height: 64px; */
   top:20;
   left: 20;
 }
+
 .modal-social-list{
   display: flex;
   gap: 15px;

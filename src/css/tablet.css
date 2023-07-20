@@ -7,10 +7,16 @@
         display: none;
     }
     .header-wrapper{
+      position: relative;
         display: flex;
         justify-content: space-between;
-    position: relative;
+ 
     }
+
+    .header-modal-window{
+      display: none;
+    }
+
     .header-nav{
         position: absolute;
        top: 90px;
@@ -31,7 +37,7 @@
         background-repeat: no-repeat;
         max-width: 768px;
         max-height: 950px;
-         padding-top: 198px;
+         padding-top: 370px;
         /* padding-bottom: 354px;  */
         margin-left: auto;
         margin-right: auto;
@@ -337,6 +343,8 @@
     background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../img/pexels-ivan-samkov-tab@2x.jpg);}
 }
 
+
+
 .form-wrapper {
   margin-left: auto;
    display: flex;
@@ -386,5 +394,7 @@ max-width: 354px;
 max-height: 449px;
 }
  
-
+/* .header-modal-window{
+  display: none;
+} */
 }

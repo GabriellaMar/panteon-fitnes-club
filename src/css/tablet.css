@@ -3,9 +3,11 @@
       max-width: 768px;
         padding: 0px 15px;
       }
+
     .mobile-menu-open-btn{
         display: none;
     }
+
     .header-wrapper{
       position: relative;
         display: flex;
@@ -35,14 +37,16 @@
         background-position: center;
         background-size: cover;
         background-repeat: no-repeat;
-        max-width: 768px;
+        max-width: 950px;
         max-height: 950px;
          padding-top: 370px;
         /* padding-bottom: 354px;  */
         margin-left: auto;
         margin-right: auto;
         /* width: 1440px; */
-      }@media (min-device-pixel-ratio: 2),
+      }
+      
+      @media (min-device-pixel-ratio: 2),
       (min-resolution: 192dpi),
       (min-resolution: 2dppx) {
           .hero-section {
@@ -56,6 +60,10 @@
         text-align: center;
         margin-bottom: 35px;
         color: #FFFFFF;
+      }
+      .hero-subtittle{
+        font-size: 28px;
+        line-height: 1.2;
       }
 
       .main-btn{
@@ -177,7 +185,6 @@
   max-width: 738px;
   align-items: center;
   margin: 0 auto;
-
 }
 .gallary-admin-slide-wrapper{
   max-height: 430px;
@@ -249,7 +256,7 @@
   .gallary-slide-scrollbar.swiper-scrollbar-horizontal,
   .gallary-admin-scrollbar.swiper-scrollbar-horizontal
   {
-    background-color: #ffffff;
+ 
     max-width: 482px;
     left: 128px;
   }
@@ -263,10 +270,11 @@
   }
 
   .single-training-wrapper{
-    padding: 30px 21px;
-    box-shadow: 0px 4px 40px rgba(0, 0, 0, 0.08);
-    min-width: 226px;
-    min-height: 372px;
+    padding: 30px 15px;
+    width: 226px;
+    height: 372px;
+    /* min-width: 226px;
+    min-height: 372px; */
   } 
    .single-training-list{
     display: flex;
@@ -275,9 +283,16 @@
     gap: 30px;
   
   } 
+  .single-training-tittle{
+    margin-top: 80px;
+    margin-bottom: 60px;
+     font-size: 24px;
+  line-height: calc(24/30); 
+  }
 
+  
   .single-training-item:last-child p{
-    margin-bottom: 30px;
+    margin-bottom: 29px;
   }
   .training-list-btn{
     width: 155px;
@@ -298,6 +313,7 @@
     display: block;
     width: 100%;
     max-width: 738px;
+    min-height: 559px;
     align-items: center;
     gap: 30px;
   }
@@ -326,21 +342,21 @@
 .consultation-section{
   padding-top: 99px;
   padding-bottom: 118px;
-  background-image: linear-gradient(rgba(12, 20, 23, 0.4) 0%,rgba(12, 20, 23, 0.4) 100%),
+  background-image:linear-gradient(rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.1) 100%, rgba(0, 0, 0, 0.4) 100%),
   url(../img/pexels-ivan-samkov-tab@.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   margin: 0 auto;
-  max-width: 768px;
-  min-height: 700px;
+  /* max-width: 920px; */
+  max-height: 700px;
   text-align: center;
 }
 
 @media (min-device-pixel-ratio: 2),
 (min-resolution: 192dpi),
 (min-resolution: 2dppx) {
-.hero-section {
-    background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../img/pexels-ivan-samkov-tab@2x.jpg);}
+.consultation-section {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.1) 100%, rgba(0, 0, 0, 0.4) 100%), url(../img/pexels-ivan-samkov-tab@2x.jpg);}
 }
 
 
@@ -352,21 +368,23 @@
   max-width: 354px;
 }
 
-.contacts-section> .container{
+.contacts-section{
+  background-color: #FFFFFF;
+  padding: 0px;
   position: relative;
  
 } 
 
 
 .contacts-wrap{
-  position: relative;
+  /* position: relative;
  top: 0;
  left: 0;
- max-width: 768px;
+ max-width: 768px; */
  height: 567px;
  
 }
-.contacts-address-map {
+/* .contacts-address-map {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -376,7 +394,7 @@
   height: 100%;
   border: 0;
   
-}
+} */
 
 .contacts-address-wrapper{
   position: absolute;
@@ -388,13 +406,51 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
- 
+  padding: 50px 24px;
+width: 354px;
+height: 449px;
+}
 
-max-width: 354px;
-max-height: 449px;
+.contacts-tittle{
+  margin-top: 10px;
+  margin-bottom: 55px;
 }
  
-/* .header-modal-window{
-  display: none;
-} */
+.footer{
+  padding: 50px 15px;
+}
+
+
+.footer>.container{
+  position: relative;
+  display: flex;
+   gap: 55px; 
+  flex-wrap: wrap;
+}
+
+.about-us-item,
+.subscription-item{
+  display: block;
+ 
+}
+
+.footer-logo-wrapper{
+  margin-top: -33px;
+  margin-left: -29px;
+ }
+ .footer-addres-wrapper{
+  text-align: right;
+ }
+
+
+ .footer-social-list{
+  display: flex;
+  justify-content: end;
+}
+.footer-copirate-wrapper{
+  position: absolute;
+  bottom: 97px;
+  left: 15px;
+}
+
 }

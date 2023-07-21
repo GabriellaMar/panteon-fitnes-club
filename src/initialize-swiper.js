@@ -4,6 +4,7 @@ import 'swiper/swiper-bundle.css';
 
  export const firstGallarySwiper = new Swiper(".gallary-swiper", {
     slidesPerView: 3,
+    spaceBetween: 30,
     direction: 'horizontal',
     navigation: {
       prevEl: ".gallary-slide-btn-prev",
@@ -22,11 +23,11 @@ import 'swiper/swiper-bundle.css';
           slidesPerView: 2,
         },
         1440: {
-          slidesPerView: 4,
+          slidesPerView: 3,
         },
       },
   
-    freeMode: true,
+      freeMode: false,
       speed: 1500,
   
       autoplay: {
@@ -38,7 +39,11 @@ import 'swiper/swiper-bundle.css';
   });
   
  export const secondGallarySwiper = new Swiper(".gallary-admin-swiper", {
-    // slidesPerView: 4,
+     slidesPerView: 4,
+     spaceBetween: 30,
+     loopAdditionalSlides: 3, // Додаткова кількість слайдів для циклічного прокручування
+     loopedSlides: 3, // Кількість слайдів, які будуть дублюватись для циклічного прокручування
+     loopFillGroupWithBlank: true, // Заповнює останню групу з іншими слайдами для циклічного прокручування
     direction: 'horizontal',
     navigation: {
       prevEl: ".gallary-admin-btn-prev",
@@ -61,18 +66,22 @@ import 'swiper/swiper-bundle.css';
         },
       },
   
-    freeMode: true,
+      freeMode: false,
       speed: 1500,
   
       autoplay: {
         delay: 2000,
       },
-    loop: true,
+     loop: true,
   });
   
 export const trainersSwiper = new Swiper(".trainers-swiper", {
     slidesPerView: 3,
     spaceBetween: 20,
+
+    // loopAdditionalSlides: 3, // Додаткова кількість слайдів для циклічного прокручування
+    // loopedSlides: 3, // Кількість слайдів, які будуть дублюватись для циклічного прокручування
+    // loopFillGroupWithBlank: true,
    
     navigation: {
       prevEl: ".trainer-slide-btn-prev",
@@ -96,7 +105,7 @@ export const trainersSwiper = new Swiper(".trainers-swiper", {
       },
     },
   
-    freeMode: true,
+    freeMode: false,
       speed: 1500,
   
       autoplay: {

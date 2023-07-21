@@ -212,4 +212,4 @@ let e;var t="undefined"!=typeof globalThis?globalThis:"undefined"!=typeof self?s
           </div>
       </div>
 </div>`,t=document.querySelector(".header-wrapper");t.insertAdjacentHTML("beforeend",e);let i=t.querySelector(".header-modal-window");i.style.display="none"}();
-//# sourceMappingURL=index.7526d670.js.map
+//# sourceMappingURL=index.bfafd737.js.map

@@ -180,7 +180,7 @@ let e;var t="undefined"!=typeof globalThis?globalThis:"undefined"!=typeof self?s
       </a>
       <button class="header-modal-close-btn" width="40" height="40">
       <svg class="header-modal-close-icon " width="100%" height="100%">
-      <use href="./img/symbol.svg#icon-close-black"></use>
+      <use href="/symbol.17bd1d83.svg#icon-close-black"></use>
       </svg>
      </button>
      <div class="modal-wrapper">
@@ -212,4 +212,4 @@ let e;var t="undefined"!=typeof globalThis?globalThis:"undefined"!=typeof self?s
           </div>
       </div>
 </div>`,t=document.querySelector(".header-wrapper");t.insertAdjacentHTML("beforeend",e);let i=t.querySelector(".header-modal-window");i.style.display="none"}();
-//# sourceMappingURL=index.13bed48e.js.map
+//# sourceMappingURL=index.322ec461.js.map

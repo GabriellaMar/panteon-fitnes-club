@@ -1,5 +1,5 @@
 export function renderModalWindowMarkup(){
-  const iconUrl = '/symbol.svg#icon-close-black';
+  const iconUrl = './img/symbol.svg#icon-close-black';
 
     return ` <div class="modal-window">
     <button class="modal-form-close-btn" width="40" height="40">

@@ -152,9 +152,7 @@ margin-left: 216px;
   height: 100%;
   z-index: 1;
   pointer-events: none;
-  
 }
-
 
 .orange-decor{
   position: absolute;
@@ -168,7 +166,6 @@ margin-left: 216px;
   /* transform: skew(38deg) rotate(51.99deg); */
   transform: rotate(51.99deg);
   transform: skewX(38deg);
- 
 }
 
 .grey-decor{
@@ -183,7 +180,6 @@ margin-left: 216px;
 }
 
 .white-decor{
-  
     position: absolute;
     top: 655px;
     left:-145px;

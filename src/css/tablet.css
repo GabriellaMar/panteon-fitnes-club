@@ -363,11 +363,9 @@
  
 } 
 
-
 .contacts-wrap{
  height: 567px;
 }
-
 
 .contacts-address-wrapper{
   position: absolute;
@@ -393,7 +391,6 @@ height: 449px;
   padding: 50px 15px;
 }
 
-
 .footer>.container{
   position: relative;
   display: flex;
@@ -404,7 +401,6 @@ height: 449px;
 .about-us-item,
 .subscription-item{
   display: block;
- 
 }
 
 .footer-logo-wrapper{

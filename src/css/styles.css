@@ -3,7 +3,7 @@
   --orange: #F7931E;
   --white: #ffffff;
   --modal-background: rgba(0, 0, 0, 0.95);
-  --black: #0000;
+  --black: #000000;
   --dark-gray: #0C1417;
   --gray: rgba(255, 255, 255, 0.5);
   --slide-color: #ffffff51;
@@ -1061,7 +1061,6 @@ header>.header-section {
 
 /*===============footer================*/
 .footer {
-
   padding-top: 50px;
   padding-bottom: 50px;
   background-color: var(--black);

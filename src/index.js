@@ -576,11 +576,11 @@ function onHeaderModalClose() {
  function renderHeaderModalMarkup(){
   const modalHeaderMarkup = `<div class="header-modal-window " >
       <a href="" class="header-modal-logo-link">
-      <img  class="mobile-logo-icon" src="/logo.889353a5.png" alt="logo-picture">
+      <img  class="mobile-logo-icon" src="./img/logo.png" alt="logo-picture">
       </a>
       <button class="header-modal-close-btn" width="40" height="40">
       <svg class="header-modal-close-icon " width="100%" height="100%">
-      <use href="/symbol.17bd1d83.svg#icon-close-black"></use>
+      <use href="./img/symbol.svg#icon-close-black"></use>
       </svg>
      </button>
      <div class="modal-wrapper">

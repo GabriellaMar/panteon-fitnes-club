@@ -23,8 +23,8 @@
         background-size: cover;
         background-repeat: no-repeat;
         /* min-width: 1440px; */
-        max-width: 100%;
-        max-height: 950px;
+        /* max-width: 100%; */
+        height: 1095px;
          padding-top: 370px;
         /* padding-bottom: 354px;  */
         margin-left: auto;
@@ -411,6 +411,16 @@ left: 60px;
   width: 280px;
   margin: 0 auto;
   margin-top: 70px;
+}
+
+.modal-window{
+  padding: 50px 20px;
+  max-width: 900px;
+max-height: 539px;
+  /* overflow-y: auto; */
+}
+.modal-form-close-icon{
+  width: 40px;
 }
 /* .consultation-form>.service-btn{
  margin-left: 20px;

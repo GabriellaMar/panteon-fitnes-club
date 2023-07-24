@@ -37,8 +37,8 @@
         background-position: center;
         background-size: cover;
         background-repeat: no-repeat;
-        max-width: 950px;
-        max-height: 950px;
+        /* max-width: 920px; */
+        height: 950px;
          padding-top: 370px;
         /* padding-bottom: 354px;  */
         margin-left: auto;
@@ -59,8 +59,7 @@
         line-height: calc(68/58);
         text-align: center;
         margin-bottom: 35px;
-        /* color: #FFFFFF; */
-        color: #F7931E;
+        color: #FFFFFF;
       }
       .hero-subtittle{
         font-size: 28px;
@@ -455,6 +454,25 @@ height: 449px;
   position: absolute;
   bottom: 97px;
   left: 15px;
+}
+.modal-window{
+  padding: 50px 20px;
+  max-width: 95vw;
+max-height: 520px;
+  /* overflow-y: auto; */
+}
+.modal-contact-wrapper{
+  display: flex;
+  gap: 25px;
+  margin-top: 30px;
+}
+.modal-logo-icon{
+  position: absolute;
+  top:10px;
+  left: -14px;
+}
+.modal-form-close-icon{
+  width: 30px;
 }
 
 }

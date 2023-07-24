@@ -49,7 +49,7 @@
     background-size: cover;
     background-repeat: no-repeat;
     /* max-width: 480px; */
-    max-height: 799px;
+    height: 799px;
     
      padding-top: 221px;
     padding-bottom: 54px; 
@@ -672,16 +672,16 @@ margin-left: -19px;
 .modal-window{
   padding: 50px 20px;
   max-width: 98vw;
-height: 98vh;
+height: 90vh;
   overflow-y: auto;
- 
 }
+
 .modal-form-close-btn {
-  top:20px;
+  top:15px;
   right: 15px;
 }
 .modal-form-close-icon{
-  width: 24px;
+  width: 20px;
 }
 .form-tittle{
   font-family: 600;
@@ -690,12 +690,16 @@ height: 98vh;
 
 .modal-form>.form-subtittle{
   font-size: 14px;
-  margin-top: 20px;
+  margin-top: 10px;
   margin-bottom: 20px;
 }
 .modal-form>.service-btn{
+padding:20px 20px ;
+  margin-top: 10px;
+}
 
-  margin-top: 40px;
+.modal-form>.name-input{
+  margin-bottom: 10px;
 }
 .modal-tittle{
  

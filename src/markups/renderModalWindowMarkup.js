@@ -1,8 +1,9 @@
 export function renderModalWindowMarkup(){
+  const iconUrl = '/symbol.882dba61.svg#icon-close-black';
     return ` <div class="modal-window">
     <button class="modal-form-close-btn" width="40" height="40">
     <svg class="modal-form-close-icon" width="100%" height="100%">
-    <use href="./img/symbol.svg#icon-close-black" ></use>
+    <use href="${iconUrl}" ></use>
     </svg>
     </button>
     <form class="consultation-form modal-form" action="submit-form" >

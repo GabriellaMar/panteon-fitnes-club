@@ -166,6 +166,9 @@
         justify-content: center;
       }
       
+      .gallary-section{
+        padding-bottom: 90px; 
+           }
 
       .gallary-tittle,
   .trainer-tittle{

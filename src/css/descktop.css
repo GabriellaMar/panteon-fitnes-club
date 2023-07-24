@@ -4,13 +4,18 @@
       padding: 0 60px;
     }
     .header-nav{
+      display: block;
         position: static;
      
     }
-    .nav-link,
-    .contact-link{
+    
+    .nav-link, .contact-link{
        font-size: 18px;
+       color: red;
     }
+    .nav-item .nav-link{
+      color: red;
+    } 
 
     .header{
       padding-top: 40px;
@@ -104,35 +109,6 @@
    
   }
 
-
-/* .gallary-admin-slider,
-.gallary-slider{
-  display: flex;
-  width: 100%;
-  max-width: 1325px;
-  align-items: center;
-  margin: 0 auto;
-}
-.gallary-admin-slide-wrapper{
-    max-height: 415px;
-    position: relative;
-    min-width: 0;
-    
-  }
-  .gallary-admin-slide-container{
-    position: relative;
-    margin-bottom: 30px;
-   width: 266px;
-    height: 375px;
-  }
-  .gallary-admin-slide {
-    display: flex;
-    flex-direction: column;
-    margin: 0;
-    margin-right: 30px; 
-    max-width: 266px;
-    max-height: 375px;
-  } */
   .gallary-admin-slider,
 .gallary-slider{
   display: flex;
@@ -254,7 +230,6 @@ margin-top: 60px;
 
   width: 26px;
   height: 26px;
-  /* position: relative; */
   fill: #ffffff;
 }
 .gallary-slide-btn-next,
@@ -356,15 +331,14 @@ height: 372px;
   @media (min-device-pixel-ratio: 2),
 (min-resolution: 192dpi),
 (min-resolution: 2dppx) {
-  .hero-section {
+  .consultation-section {
       background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../img/pexels-ivan-samkov@2x.jpg);
   }
-} 
+}
+
 
 .contacts-wrap{
-    /* position: relative;
-   top: 0;
-   left: 0; */
+  
    max-width: 100%;
   
   }
@@ -407,23 +381,28 @@ height: 372px;
 left: 60px;
 }
 
-.modal-form>.service-btn{
+
+.consultation-form>.service-btn{
   width: 280px;
+  margin-top: 30px;
+  margin-left: 0px;
+}
+.modal-form > .modal-submit-btn {
   margin: 0 auto;
   margin-top: 70px;
-}
+  }
 
 .modal-window{
   padding: 50px 20px;
   max-width: 900px;
 max-height: 539px;
-  /* overflow-y: auto; */
+ 
 }
 .modal-form-close-icon{
   width: 40px;
 }
-/* .consultation-form>.service-btn{
- margin-left: 20px;
-  margin-top: 70px;
-} */
+.privacy-policy-link {
+   margin-left: 0px; 
+}
+
   } 

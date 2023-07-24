@@ -20,6 +20,7 @@
     }
 
     .header-nav{
+      display: block;
         position: absolute;
        top: 90px;
         left: 0;
@@ -40,10 +41,8 @@
         /* max-width: 920px; */
         height: 950px;
          padding-top: 370px;
-        /* padding-bottom: 354px;  */
         margin-left: auto;
         margin-right: auto;
-        /* width: 1440px; */
       }
       
       @media (min-device-pixel-ratio: 2),
@@ -76,8 +75,6 @@
         line-height: 1.25;
       padding: 20px 33px;
         margin: 0 auto;
-        /* width: 260px;
-        height: 60px; */
         z-index: 1;
       
         background-color: transparent;
@@ -86,19 +83,15 @@
       }
       
       .hero-section .main-btn::before {
-        content: '';  /* чтобы сгенерировать поле */
+        content: ''; 
         position: absolute;
         top: 0; right: 0; bottom: 0; left: 0;
          z-index: -1; 
         transform: skew(-30deg);
-        /* background-color: #F7931E; */
         background: transparent;
         border: 1px solid #FFFFFF;
-        /* margin:0 auto ; */
-        
         }
-      
-      
+    
          .hero-section .main-btn::after{
         content: ''; 
         position: absolute;
@@ -144,8 +137,6 @@
         width: 354px;
     }
 
-
-
       .service-tittle,
      .discription-tittle{
   margin-bottom: 40px;
@@ -154,7 +145,6 @@
 }
       .service-subtittle{
           width: 100%;  
-        
        }
       
        .service-list-wrapper>.service-list{
@@ -240,8 +230,6 @@
   .gallary-slide-container {
     position: relative;
     margin-bottom: 30px;
-    /* width: 422px;
-    height: 350px;  */
   }
 
   .gallary-slide {
@@ -264,8 +252,6 @@
     left: 128px;
   }
   
-  
-
 
   .subscription-section{
     padding-top: 90px;
@@ -276,8 +262,6 @@
     padding: 30px 15px;
     width: 226px;
     height: 372px;
-    /* min-width: 226px;
-    min-height: 372px; */
   } 
    .single-training-list{
     display: flex;
@@ -380,24 +364,9 @@
 
 
 .contacts-wrap{
-  /* position: relative;
- top: 0;
- left: 0;
- max-width: 768px; */
  height: 567px;
- 
 }
-/* .contacts-address-map {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
- 
-  width: 100%;
-  height: 100%;
-  border: 0;
-  
-} */
+
 
 .contacts-address-wrapper{
   position: absolute;
@@ -459,7 +428,7 @@ height: 449px;
   padding: 50px 20px;
   max-width: 95vw;
 max-height: 520px;
-  /* overflow-y: auto; */
+
 }
 .modal-contact-wrapper{
   display: flex;

@@ -1,9 +1,15 @@
-@media screen and (min-width: 769px) {
+@media screen and (min-width: 769px) and (max-width: 1300px) {
+  .container {
+    max-width: 768px;
+      padding: 0px 15px;
+    }
+
+/* @media screen and (min-width: 769px) {
     .container {
       max-width: 768px;
         padding: 0px 15px;
         border: 2px solid blue;
-      }
+      } */
 
     .mobile-menu-open-btn{
         display: none;

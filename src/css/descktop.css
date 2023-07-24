@@ -1,22 +1,23 @@
-@media screen and (min-width: 1440px) {
+
+@media screen and (min-width: 1300px) {
+  .container {
+    max-width: 1440px;
+    padding: 0 60px;
+  }
+/* @media screen and (min-width: 1440px) {
     .container {
       max-width: 1440px;
       padding: 0 60px;
       border: 2px solid red;
-    }
+    } */
     .header-nav{
       display: block;
         position: static;
-     
     }
     
     .nav-link, .contact-link{
        font-size: 18px;
-       color: red;
     }
-    .nav-item .nav-link{
-      color: red;
-    } 
 
     .header{
       padding-top: 40px;

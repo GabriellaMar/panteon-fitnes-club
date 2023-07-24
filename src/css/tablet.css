@@ -2,6 +2,7 @@
     .container {
       max-width: 768px;
         padding: 0px 15px;
+        border: 2px solid blue;
       }
 
     .mobile-menu-open-btn{

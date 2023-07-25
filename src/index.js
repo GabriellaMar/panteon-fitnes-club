@@ -487,7 +487,7 @@ function onFooterModalClose() {
 
 function renderFooterModalMarkup(){
   const iconUrl = '/symbol.882dba61.svg#icon-close-black';
-  const logoUrl = '/logo.726d37a8.png'
+  const logoUrl = '/logo.726d37a8.png';
   const modalMarkup = `<div class="footer-modal-window">
   <a href="" class="footer-modal-logo-link">
   <img class="mobile-logo-icon" src=${logoUrl} alt="logo-picture">

@@ -580,7 +580,7 @@ function onHeaderModalClose() {
   // const logoUrl = '/img/logo.png';
   const modalHeaderMarkup = `<div class="header-modal-window " >
       <a href="" class="header-modal-logo-link">
-      <img  class="mobile-logo-icon" src="/logo.726d37a8.png" alt="logo-picture">
+      <img  class="mobile-logo-icon" src="/panteon-fitnes-club/logo.726d37a8.png" alt="logo-picture">
       </a>
       <button class="header-modal-close-btn" width="40" height="40">
       <svg class="header-modal-close-icon " width="100%" height="100%">

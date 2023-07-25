@@ -490,12 +490,12 @@ function renderFooterModalMarkup(){
   const logoUrl = '/logo.726d37a8.png'
   const modalMarkup = `<div class="footer-modal-window">
   <a href="" class="footer-modal-logo-link">
-  <img class="mobile-logo-icon" src="${logoUrl}" alt="logo-picture">
+  <img class="mobile-logo-icon" src=${logoUrl} alt="logo-picture">
 </a>
 <button class="modal-footer-close-btn" width="40" height="40">
   <svg class="modal-footer-close-icon" width="100%" height="100%">
     
-  <use href="${iconUrl}"></use>
+  <use href=${iconUrl}></use>
   </svg>
 </button>
      <div class="modal-wrapper">
@@ -576,8 +576,8 @@ function onHeaderModalClose() {
 
 
  function renderHeaderModalMarkup(){
-  const iconUrl = '/symbol.882dba61.svg#icon-close-black';
-  const logoUrl = '/logo.726d37a8.png'
+  const iconUrl = './img/symbol.svg#icon-close-black';
+  const logoUrl = './img/logo.png'
   const modalHeaderMarkup = `<div class="header-modal-window " >
       <a href="" class="header-modal-logo-link">
       <img  class="mobile-logo-icon" src="${logoUrl}" alt="logo-picture">

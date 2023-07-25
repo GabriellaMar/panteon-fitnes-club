@@ -486,8 +486,8 @@ function onFooterModalClose() {
 }
 
 function renderFooterModalMarkup(){
-  const iconUrl = '/symbol.882dba61.svg#icon-close-black';
-  const logoUrl = '/logo.726d37a8.png';
+  const iconUrl = '/symbol.882dba61.svg#icon-close-black'; 
+  const logoUrl = '/logo.726d37a8.png'; 
   const modalMarkup = `<div class="footer-modal-window">
   <a href="" class="footer-modal-logo-link">
   <img class="mobile-logo-icon" src=${logoUrl} alt="logo-picture">
@@ -543,14 +543,21 @@ footerContainer.insertAdjacentHTML('beforeend', modalMarkup);
 
 const modal = footerContainer.querySelector('.footer-modal-window');
 modal.style.display = 'none';
+const closeBtn = modal.querySelector('.modal-footer-close-icon use');
+closeBtn.setAttribute('data-src', iconUrl);
 }
- 
 
- function onFooterBurgerBtnClick(e) {
+
+function onFooterBurgerBtnClick(e) {
   const modal = document.querySelector('.footer-modal-window');
   modal.style.display = 'block';
 
-  const closeBtn = modal.querySelector('.modal-footer-close-icon');
+  const closeBtn = modal.querySelector('.modal-footer-close-icon use');
+
+
+  const iconUrl = closeBtn.getAttribute('data-src');
+  closeBtn.setAttribute('href', iconUrl);
+
   closeBtn.addEventListener('click', onFooterModalClose);
 
   closeModalOnKeyPress(e);
@@ -576,8 +583,8 @@ function onHeaderModalClose() {
 
 
  function renderHeaderModalMarkup(){
-  const iconUrl = './img/symbol.svg#icon-close-black';
-  const logoUrl = './img/logo.png'
+  const iconUrl = '/symbol.882dba61.svg#icon-close-black'; 
+  const logoUrl = '/logo.726d37a8.png'; 
   const modalHeaderMarkup = `<div class="header-modal-window " >
       <a href="" class="header-modal-logo-link">
       <img  class="mobile-logo-icon" src="${logoUrl}" alt="logo-picture">
@@ -621,6 +628,8 @@ const headerContainer = document.querySelector('.header-wrapper');
 headerContainer.insertAdjacentHTML('beforeend',  modalHeaderMarkup);
 const modal = headerContainer.querySelector('.header-modal-window');
 modal.style.display = 'none';
+const closeBtn = modal.querySelector('.header-modal-close-icon use');
+closeBtn.setAttribute('data-src', iconUrl);
 
  }
 
@@ -629,7 +638,10 @@ modal.style.display = 'none';
   const modal = document.querySelector('.header-modal-window');
   modal.style.display = 'block';
 
-  const closeBtn = modal.querySelector('.header-modal-close-icon');
+  const closeBtn = modal.querySelector('.header-modal-close-icon use');
+  const iconUrl = closeBtn.getAttribute('data-src');
+  closeBtn.setAttribute('href', iconUrl); 
+  
   closeBtn.addEventListener('click', onHeaderModalClose);
 
   closeModalOnKeyPress(e);

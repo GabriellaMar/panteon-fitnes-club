@@ -177,7 +177,7 @@ let e;var t="undefined"!=typeof globalThis?globalThis:"undefined"!=typeof self?s
       </div>
 </div>`,t=document.querySelector(".footer");t.insertAdjacentHTML("beforeend",e);let i=t.querySelector(".footer-modal-window");i.style.display="none"}();const ex=document.querySelector(".header-mobile-open-icon");function ey(){let e=document.querySelector(".header-modal-window");e.style.display="none";let t=e.querySelector(".header-modal-close-icon");t.removeEventListener("click",ey)}ex.addEventListener("click",function(e){let t=document.querySelector(".header-modal-window");t.style.display="block";let i=t.querySelector(".header-modal-close-icon");i.addEventListener("click",ey),l(e)}),function(){let e=`<div class="header-modal-window " >
       <a href="" class="header-modal-logo-link">
-      <img  class="mobile-logo-icon" src="/logo.726d37a8.png" alt="logo-picture">
+      <img  class="mobile-logo-icon" src="/panteon-fitnes-club/logo.726d37a8.png" alt="logo-picture">
       </a>
       <button class="header-modal-close-btn" width="40" height="40">
       <svg class="header-modal-close-icon " width="100%" height="100%">
@@ -213,4 +213,4 @@ let e;var t="undefined"!=typeof globalThis?globalThis:"undefined"!=typeof self?s
           </div>
       </div>
 </div>`,t=document.querySelector(".header-wrapper");t.insertAdjacentHTML("beforeend",e);let i=t.querySelector(".header-modal-window");i.style.display="none"}();
-//# sourceMappingURL=index.a951f215.js.map
+//# sourceMappingURL=index.46661029.js.map

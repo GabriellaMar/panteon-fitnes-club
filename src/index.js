@@ -474,30 +474,27 @@ scrollHeaderSubscriptionItem.addEventListener('click', (event) => {
 });
 
 //--------Render fotter modal window markau for mobile -------------
-const footerBurgerBtn = document.querySelector('.footer-mobile-open-icon');
+const footerBurgerBtn = document.querySelector('.footer-mobile-menu-open-btn');
 footerBurgerBtn.addEventListener('click', onFooterBurgerBtnClick);
 
 
 function onFooterModalClose() {
   const modal = document.querySelector('.footer-modal-window');
+  const footerLogoWrapper = document.querySelector('.footer-logo-wrapper')
+  const closeBtn = document.querySelector('.modal-footer-close-btn');
+
   modal.style.display = 'none';
-  const closeBtn = modal.querySelector('.modal-footer-close-icon');
+  closeBtn.classList.add('hidden');
+  footerLogoWrapper.style.background = 'transparent'
+
+  const footerBurgerBtn = document.querySelector('.footer-mobile-menu-open-btn');
+  footerBurgerBtn.classList.remove('hidden');
+
   closeBtn.removeEventListener('click', onFooterModalClose);
 }
 
 function renderFooterModalMarkup(){
-  const iconUrl = './img/symbol.svg#icon-close-black';
-  const logoUrl = './img/logo.png';
   const modalMarkup = `<div class="footer-modal-window">
-  <a href="" class="footer-modal-logo-link">
-  <img class="mobile-logo-icon" src=${logoUrl} alt="logo-picture">
-</a>
-<button class="modal-footer-close-btn" width="40" height="40">
-  <svg class="modal-footer-close-icon" width="100%" height="100%">
-    
-  <use href=${iconUrl}></use>
-  </svg>
-</button>
      <div class="modal-wrapper">
       <div class="footer-modal-firts-wrapper">
         <ul class=" footer-first-list  list">
@@ -548,12 +545,19 @@ modal.style.display = 'none';
 
  function onFooterBurgerBtnClick(e) {
   const modal = document.querySelector('.footer-modal-window');
-  modal.style.display = 'block';
+  const footerBurgerBtn = document.querySelector('.footer-mobile-menu-open-btn');
+  const footerLogoWrapper = document.querySelector('.footer-logo-wrapper')
+  console.log(footerLogoWrapper)
+  const closeBtn = document.querySelector('.modal-footer-close-btn');
 
-  const closeBtn = modal.querySelector('.modal-footer-close-icon');
+  modal.style.display = 'block';
+  footerLogoWrapper.style.background = 'rgba(0, 0, 0, 0.95)'
+  footerBurgerBtn.classList.add('hidden');
+  
+  closeBtn.classList.remove('hidden');
+ 
   closeBtn.addEventListener('click', onFooterModalClose);
 
-  closeModalOnKeyPress(e);
 }
 
 
@@ -561,35 +565,36 @@ modal.style.display = 'none';
 
 
 
+
+
+
  
- const headerBurgerBtn = document.querySelector('.header-mobile-open-icon');
+ const headerBurgerBtn = document.querySelector('.mobile-menu-open-btn');
  headerBurgerBtn.addEventListener('click', onHeaderBurgerBtnClick);
 
 
-
-function onHeaderModalClose() {
+ function onHeaderModalClose() {
   const modal = document.querySelector('.header-modal-window');
+  const closeBtn = document.querySelector('.header-modal-close-btn');
+  const headerWrapper = document.querySelector('.header-wrapper')
+
   modal.style.display = 'none';
-  const closeBtn = modal.querySelector('.header-modal-close-icon');
+  closeBtn.classList.add('hidden');
+  headerWrapper.style.background = 'transparent'
+
+  const headerBurgerBtn = document.querySelector('.mobile-menu-open-btn');
+  headerBurgerBtn.classList.remove('hidden');
+
   closeBtn.removeEventListener('click', onHeaderModalClose);
+
 }
 
 
  function renderHeaderModalMarkup(){
-  const iconUrl = '/img/symbol.svg#icon-close-black';
-  // const logoUrl = '/img/logo.png';
   const modalHeaderMarkup = `<div class="header-modal-window " >
-      <a href="" class="header-modal-logo-link">
-      <img  class="mobile-logo-icon" src='/logo.726d37a8.png' alt="logo-picture">
-      </a>
-      <button class="header-modal-close-btn" width="40" height="40">
-      <svg class="header-modal-close-icon " width="100%" height="100%">
-      <use href="${iconUrl}"></use>
-      </svg>
-     </button>
      <div class="modal-wrapper">
       <div class="footer-modal-firts-wrapper">
-        <ul class=" footer-first-list  list">
+        <ul class="footer-first-list  list">
           <li class="footer-first-item ">
             <a class="footer-first-link  link" href="">Tренери</a>
           </li>
@@ -621,18 +626,25 @@ const headerContainer = document.querySelector('.header-wrapper');
 headerContainer.insertAdjacentHTML('beforeend',  modalHeaderMarkup);
 const modal = headerContainer.querySelector('.header-modal-window');
 modal.style.display = 'none';
-
  }
 
  
  function onHeaderBurgerBtnClick(e) {
+  const headerBurgerBtn = document.querySelector('.mobile-menu-open-btn');
+  const headerWrapper = document.querySelector('.header-wrapper')
   const modal = document.querySelector('.header-modal-window');
+  const closeBtn = document.querySelector('.header-modal-close-btn');
+
+  headerWrapper.style.background = 'rgba(0, 0, 0, 0.95)'
+  
+  headerBurgerBtn.classList.add('hidden');
+
+  closeBtn.classList.remove('hidden');
+
   modal.style.display = 'block';
 
-  const closeBtn = modal.querySelector('.header-modal-close-icon');
   closeBtn.addEventListener('click', onHeaderModalClose);
 
-  closeModalOnKeyPress(e);
 }
 
  renderHeaderModalMarkup()

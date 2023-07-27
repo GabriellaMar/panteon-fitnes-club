@@ -114,7 +114,8 @@ header>.header-section {
 
 }
 
-.mobile-menu-open-btn {
+.mobile-menu-open-btn,
+.footer-mobile-menu-open-btn {
   background-color: transparent;
   border: none;
 }
@@ -140,6 +141,7 @@ header>.header-section {
 .nav-item .nav-link:hover,
 .nav-item .nav-link:focus {
   color: var(--orange);
+  transition: all .3s ease;
 }
 
 
@@ -160,6 +162,7 @@ header>.header-section {
 .contact-link:hover,
 .contact-link:focus {
   color: var(--orange);
+  transition: all .3s ease;
 }
 
 /*===============================HERO Section======================*/
@@ -303,7 +306,6 @@ header>.header-section {
 
 .hero-section .main-btn::before {
   content: '';
-  /* чтобы сгенерировать поле */
   position: absolute;
   top: 0;
   right: 0;
@@ -376,10 +378,6 @@ header>.header-section {
   color: var(--white);
 }
 
-/* .service-wrapper{
-  display: flex;
-}
-  */
 
 .service-btn {
   display: block;

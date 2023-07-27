@@ -19,7 +19,10 @@
   .header-modal-window {
     display: none;
   }
-
+  .header-modal-close-btn,
+  .modal-footer-close-btn{
+    display: none;
+  }
   .header-nav {
     display: block;
     position: absolute;
@@ -38,7 +41,7 @@
   .hero-section {
     position: relative;
     background-image: linear-gradient(rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.1) 100%, rgba(0, 0, 0, 0.4) 100%),
-      url(../img/pexels-cottonbro-76.jpg );
+      url(../images/pexels-cottonbro-76.jpg );
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -53,7 +56,7 @@
   (min-resolution: 192dpi),
   (min-resolution: 2dppx) {
     .hero-section {
-      background-image: linear-gradient(rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.1) 100%, rgba(0, 0, 0, 0.4) 100%), url(../img/pexels-cottonbro-76@2x.jpg);
+      background-image: linear-gradient(rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.1) 100%, rgba(0, 0, 0, 0.4) 100%), url(../images/pexels-cottonbro-76@2x.jpg);
     }
   }
 
@@ -352,7 +355,7 @@
     padding-top: 99px;
     padding-bottom: 118px;
     background-image: linear-gradient(rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.1) 100%, rgba(0, 0, 0, 0.4) 100%),
-      url(../img/pexels-ivan-samkov-tab@.jpg);
+      url(../images/pexels-ivan-samkov-tab@.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     margin: 0 auto;
@@ -365,7 +368,7 @@
   (min-resolution: 192dpi),
   (min-resolution: 2dppx) {
     .consultation-section {
-      background-image: linear-gradient(rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.1) 100%, rgba(0, 0, 0, 0.4) 100%), url(../img/pexels-ivan-samkov-tab@2x.jpg);
+      background-image: linear-gradient(rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.1) 100%, rgba(0, 0, 0, 0.4) 100%), url(../images/pexels-ivan-samkov-tab@2x.jpg);
     }
   }
 
@@ -434,7 +437,9 @@
     text-align: right;
   }
 
-
+.footer-mobile-menu-open-btn{
+  display: none;
+}
   .footer-social-list {
     display: flex;
     justify-content: end;
